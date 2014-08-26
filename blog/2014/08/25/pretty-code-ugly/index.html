@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Meditations</title>
+  <title>Pretty Code Ugly - Meditations</title>
   <meta name="author" content="Cuzzo">
 
   
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://yoursite.com">
+  <link rel="canonical" href="http://yoursite.com/blog/2014/08/25/pretty-code-ugly">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Meditations" type="application/atom+xml">
@@ -59,18 +59,15 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
   
     
-      <h1 class="entry-title"><a href="/blog/2014/08/25/pretty-code-ugly/">Pretty Code Ugly</a></h1>
-      
-      
+      <h1 class="entry-title">Pretty Code Ugly</h1>
+    
+  
     
       <p class="meta">
         
@@ -92,9 +89,9 @@
   </header>
 
 
-  <div class="entry-content"><p>There comes a time in everyone&rsquo;s life when appearance becomes important. Usually, it&rsquo;s around the teenage years. For some it&rsquo;s earlier. But by high-school time, c&#8217;mon. What girl can resist the pretty red dress on display in Nordstrom when Prom is around the corner?</p>
+<div class="entry-content"><p>There comes a time in everyone&rsquo;s life when appearance becomes important. Usually, it&rsquo;s around the teenage years. For some it&rsquo;s earlier. But by high-school time, c'mon. What girl can resist the pretty red dress on display in Nordstrom when Prom is around the corner?</p>
 
-<p>And so too comes the time in developers&#8217; lives when we become confident in our programmatic skills and start looking elsewhere to improve. In high school, we might splurge on a superfly jacket with a collar to pop up higher than Count Chocula. In nerd-world, we might stare at a LCD until our eyes go cross and we say something like, &ldquo;hmm&hellip; what this line could use is some whitespace.&rdquo;</p>
+<p>And so too comes the time in developers' lives when we become confident in our programmatic skills and start looking elsewhere to improve. In high school, we might splurge on a superfly jacket with a collar to pop up higher than Count Chocula. In nerd-world, we might stare at a LCD until our eyes go cross and we say something like, &ldquo;hmm&hellip; what this line could use is some whitespace.&rdquo;</p>
 
 <p>And so begins that teenage phase in programming, and instead of brushing our hair and checking out our jaw-line in the mirror, we&rsquo;re smashing our face on the spacebar and pointing to our Github and yelling, &ldquo;MOM! LOOK HOW PRETTY MY CODE IS!&rdquo;</p>
 
@@ -113,7 +110,7 @@
 
 <p>Let&rsquo;s first establish what Pretty Code is, and why it exists, because that&rsquo;s all that&rsquo;s needed to completely destroy its case. Let&rsquo;s use the least impractical case of Pretty Code first and look at two equal dictionaries:</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -131,12 +128,12 @@
 </span><span class='line'>  <span class="nx">something</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
 </span><span class='line'>  <span class="nx">x</span><span class="o">:</span> <span class="kc">false</span>
 </span><span class='line'><span class="p">};</span>
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 
 
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -154,14 +151,14 @@
 </span><span class='line'>  <span class="nx">something</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
 </span><span class='line'>  <span class="nx">x</span><span class="o">:</span>         <span class="kc">false</span>
 </span><span class='line'><span class="p">};</span>
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 
 <p>As you can see above, one of these blocks is labeled <code>ugly</code> and the other <code>pretty</code>. Pretty Code, as shown above, is the &ldquo;art&rdquo; of lining up pieces of code with whitespace.</p>
 
 <p>We can deduce that Pretty Code isn&rsquo;t done to speed up coding, right? Like how are you possibly adding in that whitespace faster than not adding it in? You&rsquo;re not. It&rsquo;s not faster to write code this way.</p>
 
-<p>Your shiny, new i7 isn&rsquo;t looking at its fingernails and saying, &ldquo;You know, I was going to run this dictionary slow, but then I saw how pretty it is, so let me get back to work and start exuctin&#8217; like a G.&rdquo; Right? We know whitespace has no effect on performance.</p>
+<p>Your shiny, new i7 isn&rsquo;t looking at its fingernails and saying, &ldquo;You know, I was going to run this dictionary slow, but then I saw how pretty it is, so let me get back to work and start exuctin' like a G.&rdquo; Right? We know whitespace has no effect on performance.</p>
 
 <p>So, the only reason I can see to Pretty Code is because it &ldquo;looks&rdquo; better. The key word here is &ldquo;looks&rdquo;.</p>
 
@@ -171,27 +168,27 @@
 
 <p>Have you ever written one line of code:</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 
 <p>And decided, &ldquo;you know what this line needs is&hellip; whitespace&hellip; lots of whitespace.&rdquo; and, with that thought in mind, refactored it to:</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">x</span>     <span class="o">=</span>    <span class="mi">1</span><span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 
 <p>No.</p>
 
 <p>Why? Because that line is less readable. It doesn&rsquo;t magically become more readable if the line below is:</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 </pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">x</span>     <span class="o">=</span>    <span class="mi">1</span><span class="p">;</span>
 </span><span class='line'><span class="kd">var</span> <span class="nx">pizza</span> <span class="o">=</span> <span class="mi">1001</span><span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 
 <p>Pretty Code looks better, yes. But looking at code isn&rsquo;t important. Reading it is.</p>
@@ -208,7 +205,7 @@
 
 <p>So, you open up <code>./src/config/locales/en.js</code> and you see:</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -218,12 +215,12 @@
 </span><span class='line'>  <span class="nx">post_to_wall</span><span class="o">:</span> <span class="s2">&quot;Post on your Facebook how awesome we are RIGHT NOW!&quot;</span><span class="p">,</span>
 </span><span class='line'>  <span class="nx">tweet</span>       <span class="o">:</span> <span class="s2">&quot;Post on your Twitter how awesome we are RIGHT NOW!&quot;</span>
 </span><span class='line'><span class="p">};</span>
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 
 <p>And you stop for a second to admire how beatiful it is, and then you press <code>i</code> and get to work. But quickly, you&rsquo;re stumpped:</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -235,12 +232,12 @@
 </span><span class='line'>  <span class="nx">tweet</span>       <span class="o">:</span> <span class="s2">&quot;Post on your Twitter how awesome we are RIGHT NOW!&quot;</span> <span class="p">,</span>
 </span><span class='line'>  <span class="nx">virtual_phone_bank</span><span class="o">:</span> <span class="s2">&quot;Sign up and start saving babies RIGHT NOW!&quot;</span>
 </span><span class='line'><span class="p">};</span>
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 
 <p>&ldquo;Oh, no!&rdquo; you think, &ldquo;it&rsquo;s so ugly!&rdquo; and after your eyeballs are black and your nose is bluddy and you&rsquo;ve slammed your face on the spacebar a grand total of 18 times, you can go back to saying &ldquo;Mirror, Mirror, on the wall, who has the most whitespace of them all?&rdquo; And you&rsquo;ll know the answer is you, because your code now look like:</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -252,7 +249,7 @@
 </span><span class='line'>  <span class="nx">tweet</span>             <span class="o">:</span> <span class="s2">&quot;Post on your Twitter how awesome we are RIGHT NOW!&quot;</span> <span class="p">,</span>
 </span><span class='line'>  <span class="nx">virtual_phone_bank</span><span class="o">:</span> <span class="s2">&quot;Sign up and start saving babies RIGHT NOW!&quot;</span>
 </span><span class='line'><span class="p">};</span>
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 
 <p>And, now that you&rsquo;ve worked your typesetting wonders, not only is there the problem that by the time my eyes get to &ldquo;Help the president&hellip;&rdquo; that they&rsquo;re so far removed from &ldquo;disco&rdquo; that I have to look back to remember what I&rsquo;m even assigning to what&hellip; but also, you&rsquo;ve just changed that line of code, and when Teddy from Product goes through to figure out who to fire for putting a joke line in the code, you&rsquo;re going to have to say, &ldquo;But I didn&rsquo;t even write that line! Swear! I just made it pretty is all!&rdquo;</p>
@@ -263,39 +260,39 @@
 
 <p>Finally, let&rsquo;s explore why pretty code isn&rsquo;t even practical in the first place. Because if you&rsquo;ve gotten this far, and you&rsquo;re still on board the Pretty Code Express, maybe this can totally derail you&rsquo;re world.</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">render</span><span class="p">(</span><span class="s2">&quot;/views/homepage/header&quot;</span><span class="p">,</span> <span class="p">{</span><span class="nx">title</span><span class="o">:</span> <span class="s2">&quot;Obama for America&quot;</span><span class="p">,</span> <span class="nx">subtitle</span><span class="o">:</span> <span class="s2">&quot;Yes We Can!&quot;</span><span class="p">},</span> <span class="p">{</span><span class="nx">layout</span><span class="o">:</span> <span class="kc">false</span><span class="p">})</span>
 </span><span class='line'><span class="nx">render</span><span class="p">(</span><span class="s2">&quot;/views/homepage/hero&quot;</span><span class="p">,</span> <span class="p">{</span><span class="nx">img</span><span class="o">:</span> <span class="s2">&quot;/assets/heros/denver-rally.png&quot;</span><span class="p">,</span> <span class="nx">caption</span><span class="o">:</span> <span class="s2">&quot;A Better America Starts Today.&quot;</span><span class="p">,</span> <span class="p">{</span><span class="nx">layout</span><span class="o">:</span> <span class="kc">true</span><span class="p">})</span>
 </span><span class='line'><span class="nx">render</span><span class="p">(</span><span class="s2">&quot;/views/footer&quot;</span><span class="p">,</span> <span class="p">{</span><span class="nx">links</span><span class="o">:</span> <span class="p">[{</span><span class="nx">title</span><span class="o">:</span> <span class="s2">&quot;about&quot;</span><span class="p">,</span> <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;/about&quot;</span><span class="p">},</span> <span class="p">{</span><span class="nx">title</span><span class="o">:</span> <span class="s2">&quot;privacy&quot;</span><span class="p">,</span> <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;/privacy&quot;</span><span class="p">}]},</span> <span class="p">{</span><span class="nx">layout</span><span class="o">:</span> <span class="kc">false</span><span class="p">})</span>
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 
 <p>If you&rsquo;re not the type of Pretty Coder that lines up similar functions, thank Stroustrup. But let&rsquo;s assume you are, and let&rsquo;s assume you also don&rsquo;t care about character line limits, and all you care about is how your code &ldquo;looks&rdquo;.</p>
 
 <p>You&rsquo;d end up with:</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">render</span><span class="p">(</span><span class="s2">&quot;/views/homepage/header&quot;</span><span class="p">,</span> <span class="p">{</span><span class="nx">title</span><span class="o">:</span> <span class="s2">&quot;Obama for America&quot;</span><span class="p">,</span> <span class="nx">subtitle</span><span class="o">:</span> <span class="s2">&quot;Yes We Can!&quot;</span><span class="p">}</span>                            <span class="p">,</span> <span class="p">{</span><span class="nx">layout</span><span class="o">:</span> <span class="kc">false</span><span class="p">})</span>
 </span><span class='line'><span class="nx">render</span><span class="p">(</span><span class="s2">&quot;/views/homepage/hero&quot;</span>  <span class="p">,</span> <span class="p">{</span><span class="nx">img</span><span class="o">:</span> <span class="s2">&quot;/assets/heros/denver-rally.png&quot;</span><span class="p">,</span> <span class="nx">caption</span><span class="o">:</span> <span class="s2">&quot;A Better America Starts Today.&quot;</span><span class="p">,</span> <span class="p">{</span><span class="nx">layout</span><span class="o">:</span> <span class="kc">true</span><span class="p">})</span>
 </span><span class='line'><span class="nx">render</span><span class="p">(</span><span class="s2">&quot;/views/footer&quot;</span>         <span class="p">,</span> <span class="p">{</span><span class="nx">links</span><span class="o">:</span> <span class="p">[{</span><span class="nx">title</span><span class="o">:</span> <span class="s2">&quot;about&quot;</span><span class="p">,</span> <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;/about&quot;</span><span class="p">},</span> <span class="p">{</span><span class="nx">title</span><span class="o">:</span> <span class="s2">&quot;privacy&quot;</span><span class="p">,</span> <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;/privacy&quot;</span><span class="p">}]}</span>  <span class="p">,</span> <span class="p">{</span><span class="nx">layout</span><span class="o">:</span> <span class="kc">false</span><span class="p">})</span>
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 
 <p>Which, A) reading that now makes me want to cry, and B) writing that made me want to punch a baby. I mean, I <strong>literally</strong> have three black eyes and two broken noses and my spacebar key doesn&rsquo;t even work anymore. I had to remap it to &ldquo;CAPS LOCK&rdquo; becuase I already broke all the other ones pretty coding with my face so hard.</p>
 
 <p>Anyway, back on topic&hellip; Imagine adding two more links to the <code>links</code> property in the third <code>render</code>:</p>
 
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 </pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">render</span><span class="p">(</span><span class="s2">&quot;/views/homepage/header&quot;</span><span class="p">,</span> <span class="p">{</span><span class="nx">title</span><span class="o">:</span> <span class="s2">&quot;Obama for America&quot;</span><span class="p">,</span> <span class="nx">subtitle</span><span class="o">:</span> <span class="s2">&quot;Yes We Can!&quot;</span><span class="p">}</span>                                                                                               <span class="p">,</span> <span class="p">{</span><span class="nx">layout</span><span class="o">:</span> <span class="kc">false</span><span class="p">})</span>
 </span><span class='line'><span class="nx">render</span><span class="p">(</span><span class="s2">&quot;/views/homepage/hero&quot;</span>  <span class="p">,</span> <span class="p">{</span><span class="nx">img</span><span class="o">:</span> <span class="s2">&quot;/assets/heros/denver-rally.png&quot;</span><span class="p">,</span> <span class="nx">caption</span><span class="o">:</span> <span class="s2">&quot;A Better America Starts Today.&quot;</span>                                                                   <span class="p">,</span> <span class="p">{</span><span class="nx">layout</span><span class="o">:</span> <span class="kc">true</span><span class="p">})</span>
 </span><span class='line'><span class="nx">render</span><span class="p">(</span><span class="s2">&quot;/views/footer&quot;</span>         <span class="p">,</span> <span class="p">{</span><span class="nx">links</span><span class="o">:</span> <span class="p">[{</span><span class="nx">title</span><span class="o">:</span> <span class="s2">&quot;about&quot;</span><span class="p">,</span> <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;/about&quot;</span><span class="p">},</span> <span class="p">{</span><span class="nx">title</span><span class="o">:</span> <span class="s2">&quot;privacy&quot;</span><span class="p">,</span> <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;/privacy&quot;</span><span class="p">},</span> <span class="p">{</span><span class="nx">title</span><span class="o">:</span> <span class="s2">&quot;terms&quot;</span><span class="p">,</span> <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;/terms&quot;</span><span class="p">},</span> <span class="p">{</span><span class="nx">title</span><span class="o">:</span> <span class="s2">&quot;jobs&quot;</span><span class="p">,</span> <span class="nx">url</span><span class="o">:</span> <span class="s2">&quot;/careers&quot;</span><span class="p">}]}</span>  <span class="p">,</span> <span class="p">{</span><span class="nx">layout</span><span class="o">:</span> <span class="kc">false</span><span class="p">})</span>
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 
 <p>Not only can I not read a single line of that code, not only have you shitted on the revision history with gusto (twice now), but&ndash;also&ndash;it looks absurd! And that&rsquo;s what the whole point of Pretty Code is, making code look good.</p>
@@ -304,18 +301,51 @@
 
 <p>So the next time you&rsquo;re bored out of your mind, and you&rsquo;ve got out your hair brush, and you&rsquo;re talking to your mirror, and you&rsquo;re about to Pretty Code&hellip; think about us, the ones reading your code. And, think about the spacebar, poor old Mr. Spacebar.</p>
 </div>
+
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">Cuzzo</span></span>
+
+      
+
+
+
+
+
+
+
+
   
 
 
-    </article>
+<time datetime="2014-08-25T12:02:50-07:00" pubdate data-updated="true"></time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
   
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://yoursite.com/blog/2014/08/25/pretty-code-ugly/" data-via="" data-counturl="http://yoursite.com/blog/2014/08/25/pretty-code-ugly/" >Tweet</a>
+  
+  
+  
 </div>
+
+    
+    <p class="meta">
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
 <aside class="sidebar">
   
     <section>
@@ -335,6 +365,7 @@
 
   
 </aside>
+
 
     </div>
   </div>
