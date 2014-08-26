@@ -11,14 +11,14 @@
   
   <url>
     <loc>http://yoursite.com/</loc>
-    <lastmod>2014-08-26T01:13:53-07:00</lastmod>
+    <lastmod>2014-08-26T01:27:05-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://yoursite.com/blog/archives/</loc>
-    <lastmod>2014-08-26T01:13:53-07:00</lastmod>
+    <lastmod>2014-08-26T01:27:05-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
