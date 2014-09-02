@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Meditations]]></title>
-  <link href="http://yoursite.com/atom.xml" rel="self"/>
-  <link href="http://yoursite.com/"/>
-  <updated>2014-08-26T01:27:05-07:00</updated>
-  <id>http://yoursite.com/</id>
+  <link href="http://cuzzo.github.io/atom.xml" rel="self"/>
+  <link href="http://cuzzo.github.io/"/>
+  <updated>2014-09-02T00:13:38-07:00</updated>
+  <id>http://cuzzo.github.io/</id>
   <author>
     <name><![CDATA[Cuzzo]]></name>
     
@@ -15,11 +15,103 @@
   
   <entry>
     
+    <title type="html"><![CDATA[80 Characters Is Enough]]></title>
+    <link href="http://cuzzo.github.io/blog/2014/08/29/80-characters-is-enough/"/>
+    
+    <updated>2014-08-29T10:44:33-07:00</updated>
+    <id>http://cuzzo.github.io/blog/2014/08/29/80-characters-is-enough</id>
+    
+    <content type="html"><![CDATA[<p>It&rsquo;s human nature to break the rules. &ldquo;Rules are made to be broken,&rdquo; you must hear at least twice a day during all that time you&rsquo;re not using to floss your teeth. When the Lord God commanded Adam not to eat the fruit of the tree, all it took was one Talking Snake, and look where we are now, all these years later, and well you know what the doctor says about apples&hellip;</p>
+
+<p>We&rsquo;re rule breakers. We break them for fun. We break them for profit. We speed to work. We let our kids eat cotton candy for breakfast. And so on.</p>
+
+<p>But just because we break the rules, it doesn&rsquo;t make it acceptable. It doesn&rsquo;t make the rules dismissable. And it damn well doesn&rsquo;t make that orange skirt look good with the brown terracotta jacket and the purple 10 gallon hat.</p>
+
+<p>And you know what else doesn&rsquo;t look good? Long lines of code.</p>
+
+<p>And just because we push character after character unto our lines, until we&rsquo;ve past through to the hundreds, right into the thousands, and we&rsquo;re well on the way to chaining together the entire text of Great Gatsby all into a one-liner&hellip; That doesn&rsquo;t make it okay, or godly. No, unless you&rsquo;re some sadistic code-god determined to smote the open source community with inline lambdas&hellip;</p>
+
+<p>Whether you&rsquo;re a habitual chainer or not, or whether your line limit is 81 or infinity, I&rsquo;m here to explain why you need to think about the standard of 80, and why it&rsquo;s there, and why it helps. And here&rsquo;s the <strong>TL;DR</strong>:</p>
+
+<ul>
+<li><a href="#line-count-means-nothing">Line Count Is Meaningless</a></li>
+<li><a href="#a-line-means-something">A Line Has Meaning</a></li>
+<li><a href="#because-duh">Because, Duh</a></li>
+</ul>
+
+
+<h1><a name="line-count-means-nothing">Line Count Is Meaningless</a></h1>
+
+<p>There&rsquo;s this mistaken notion that &ldquo;short code&rdquo; is somehow better than &ldquo;long code&rdquo;, as if you can measure quality by how many lines of code something is, as if less lines of code means a faster process&ndash;or it somehow reduces complexity or increases maintainability. No, lines of code, in reality, means nothing. Nothing at all. When it comes to code, statements talk, and&hellip; well nothing else does. And if you jam thirty-seven statements onto one line or ten or you space them out across ten-million, it&rsquo;s still thirty-seven statements.</p>
+
+<p>Thinking about line count is absurd. And the irony that it comes from people that know better is mind-boggling.</p>
+
+<p>These lengthy lines of code frequently come from people that preach about slimming down our functions. We&rsquo;re all in agreement that fat functions are bad. So, all together now, let&rsquo;s take ONE second, un momento, and apply what we know about functions to lines of code.</p>
+
+<p>We like smaller functions because the longer a function, intrinsically, the more frequently it is to change. And this is, in the scientific world, what we call a &ldquo;double whammy&rdquo;. Firstly, since the function is fat/long, any change to it is poorly isolated, and has too vast a depth. I.E., if you&rsquo;re an object, and the responsibilities for <code>shit()ing</code> and <code>faceWash()ing</code> are both housed in the same function, if you&rsquo;re not careful with a change to that function, you just might end up shitting on your face, and well, that&rsquo;s probably not what you had in mind, now is it? Secondly, we just said because it&rsquo;s long, changes to it will happen more frequently. The name of the game here is Not Shitting on Your Face, and, as engineers, we try to do that as much as possible. But, with long functions, we do this all the time, shooting ourselves in the foot, so to speak.</p>
+
+<p>Anyway, let&rsquo;s apply what we know about functions to lines of code. Maybe we&rsquo;ll discover something</p>
+
+<p>Any line with a lot going on is more likely to change than a line with not as much going on. And because a lot is going on, there&rsquo;s a higher likelyhood of someone submitting a pull-request to shit on your face, or break your code, or introduce a bug. And before you butt in with, &ldquo;but that&rsquo;s why we have tests&rdquo;, let me butt back with, &ldquo;do tell me about how you never have production bugs&rdquo;.</p>
+
+<p>Long lines of code are just all around terrible, even more so than long functions, methinks.</p>
+
+<h1><a name="a-line-means-something">A Line Has Meaning</a></h1>
+
+<p>Let&rsquo;s keep applying what we know to be true about functions to lines of code, because, you know, we have a brain, and there&rsquo;s this thing I heard about once in a Kurt Vonnegut book called&hellip; common sense.</p>
+
+<p>Remember the awful days of functions just being there? Remember how they used to just be repositories for things to happen, with no real meaning?</p>
+
+<p>Yeah, it was awful.</p>
+
+<p>But then, the White Knight swept us off our feet. It told us about Single Responsibility. It said, &ldquo;Yo homie, a function has meaning. It should do something. It should mean something. And that should only be one thing. Your functions oughta have a single responsibility.&rdquo;</p>
+
+<p>And this was divine intervetion to our cesspits we called functions. After we applied it, code started to make sense. It started to be testable. It started to be readable. The smells went away. And rainbows started appearing.</p>
+
+<p>But then, the rebels we are, we threw everything we learned out the window when we hopped all aboard the Lambda-Chain-Train headed straight to Hell. We started jamming ten statements (read ten responsibilities) onto a single line of code. We started making functions out of lines, and we got right back to where we started, with our functions (read lines) having multiple responsiblities, and what&rsquo;s really going on in there being a more carefully kept secret than the reveal of an Agatha Christie thriller-mystery.</p>
+
+<p>Maybe it&rsquo;s the suspense driving people wild, or maybe it&rsquo;s the spirit of competition to see who can write the next longest line of code. Whatever it is, it&rsquo;s leading to the Fat2.0 revoluation. Because fat isn&rsquo;t how many lines a function is. It&rsquo;s how many statements it is. Just because you snuck six-hundred statements into two lines of code, that doesn&rsquo;t mean you can call it one function, not any less than you could call that tripple-god-object-in-a-single-function a function.</p>
+
+<p>So let&rsquo;s stop the revulation right here. Let&rsquo;s stop bringing fat back. We&rsquo;re not Justin Timberlake.</p>
+
+<h1><a name="because-duh">Because, Duh</a></h1>
+
+<p>To wrap things up, I&rsquo;ll just state the obvious.</p>
+
+<p>Have you ever written something like:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">();</span>
+</span><span class='line'><span class="nx">x</span><span class="p">.</span><span class="nx">setName</span><span class="p">(</span><span class="s2">&quot;Cuzzo&quot;</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And thought, &ldquo;you know, that&rsquo;s too many lines for that. What would make that good is if I changed it to:&rdquo;</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="p">();</span> <span class="nx">x</span><span class="p">.</span><span class="nx">setName</span><span class="p">(</span><span class="s2">&quot;Cuzzo&quot;</span><span class="p">);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>No.</p>
+
+<p>Why? Because we&rsquo;ve been writing one statement per line since the beginning of computers. With chaining, we see the ability to take out the extra x, and we should. But keep it two separate lines, people. It&rsquo;s two responsibilities.</p>
+
+<p>We might all have monitors long enough to watch six high-def Pornhubs at once. More than 80 characters can definitely fit on the screen. So why not use all that space? Because, one, it&rsquo;s a standard. And, two, if you&rsquo;re going over 80 characters, you&rsquo;ve probably done more than one thing wrong. You probably oughta make a function out ten-minute side-scrolling platform-adventure-game you call a line, so, you know, I don&rsquo;t have to beat Bowser just to know what your line is doing.</p>
+
+<p>The next time you&rsquo;re in the middle of that epic chain, and you&rsquo;re trying to remember if you just <code>filter()ed</code> or <code>map()ed</code>, take a second to think about me, the dumbass, scratching my head all the way back at the beginning, ten high-levels ago, trying to remember what <code>foldRight()</code> does in the first place. Zeesh.</p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
     <title type="html"><![CDATA[Pretty Code Ugly]]></title>
-    <link href="http://yoursite.com/blog/2014/08/25/pretty-code-ugly/"/>
+    <link href="http://cuzzo.github.io/blog/2014/08/25/pretty-code-ugly/"/>
     
     <updated>2014-08-25T12:02:50-07:00</updated>
-    <id>http://yoursite.com/blog/2014/08/25/pretty-code-ugly</id>
+    <id>http://cuzzo.github.io/blog/2014/08/25/pretty-code-ugly</id>
     
     <content type="html"><![CDATA[<p>There comes a time in everyone&rsquo;s life when appearance becomes important. Usually, it&rsquo;s around the teenage years. For some it&rsquo;s earlier. But by high-school time, c&#8217;mon. What girl can resist the pretty red dress on display in Nordstrom when Prom is around the corner?</p>
 

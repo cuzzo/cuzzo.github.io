@@ -3,22 +3,28 @@
   
   
   <url>
-    <loc>http://yoursite.com/blog/2014/08/25/pretty-code-ugly/</loc>
+    <loc>http://cuzzo.github.io/blog/2014/08/29/80-characters-is-enough/</loc>
+    <lastmod>2014-08-29T10:44:33-07:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://cuzzo.github.io/blog/2014/08/25/pretty-code-ugly/</loc>
     <lastmod>2014-08-25T12:02:50-07:00</lastmod>
     <priority>0.8</priority>
   </url>
   
   
   <url>
-    <loc>http://yoursite.com/</loc>
-    <lastmod>2014-08-26T01:27:05-07:00</lastmod>
+    <loc>http://cuzzo.github.io/</loc>
+    <lastmod>2014-09-02T00:13:38-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
-    <loc>http://yoursite.com/blog/archives/</loc>
-    <lastmod>2014-08-26T01:27:05-07:00</lastmod>
+    <loc>http://cuzzo.github.io/blog/archives/</loc>
+    <lastmod>2014-09-02T00:13:38-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
