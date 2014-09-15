@@ -4,7 +4,7 @@
   <title><![CDATA[Meditations]]></title>
   <link href="http://cuzzo.github.io/atom.xml" rel="self"/>
   <link href="http://cuzzo.github.io/"/>
-  <updated>2014-09-02T00:31:24-07:00</updated>
+  <updated>2014-09-15T12:32:24-07:00</updated>
   <id>http://cuzzo.github.io/</id>
   <author>
     <name><![CDATA[Cuzzo]]></name>
@@ -12,6 +12,69 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    
+    <title type="html"><![CDATA[Logicless Templates: LOL]]></title>
+    <link href="http://cuzzo.github.io/blog/2014/09/14/logicless-templates-lol/"/>
+    
+    <updated>2014-09-14T22:02:24-07:00</updated>
+    <id>http://cuzzo.github.io/blog/2014/09/14/logicless-templates-lol</id>
+    
+    <content type="html"><![CDATA[<blockquote><p>Logicless: To be devoid of logic.</p>
+
+<p><cite>Merriam-Webster&rsquo;s Dictionary</cite></p></blockquote>
+
+<p>Babies are logicless, right? They eat and they shit. They throw toy blocks to and fro. They slap randomly at the Tower of Hanoi you bought them, not giving a damn about your shitty computer science references.</p>
+
+<p>But logicless as they seem, they aren&rsquo;t really, are they? I mean, not even bogosort is. We just call babies logicless, as maybe some sort of harmless insult. &ldquo;Oh, Suzy, that baby of yours, he&rsquo;s just so&hellip; logicless.&rdquo; It almost sounds nice! The chic thing to say. The alternative, &ldquo;Hey, Suzy, that baby of yours, he&rsquo;s just such a&hellip; stupid bitch&hellip;&rdquo; that&rsquo;s probably gonna land you a swift smack from yours truly, Suzy.</p>
+
+<p>And if you&rsquo;ve fallen for the promise of logicless templates, you probably deserve a swift smack as well. &ldquo;Logicless&rdquo; has a negative connotation. So it&rsquo;s no coincidence that logicless templates are severely flawed. They have their uses, sure. I use Handlebars in a few projects. But they belong nowhere near a large web application (most the time). Here&rsquo;s why:</p>
+
+<ul>
+<li><a href="#logicless-orly">Logicless? ORLY?</a></li>
+<li><a href="#logic-is-unavoidable">Logic Is Unavoidable</a></li>
+</ul>
+
+
+<h2><a name="logicless-orly">Logicless? ORLY?</a></h2>
+
+<p>First of all, let&rsquo;s just get one thing straight. The very idea of calling Handlebars and Moustache &ldquo;logicless&rdquo; is&hellip; well&hellip; logicless. Retarded even, if you prefer. We&rsquo;ve had logicless templates, long long before Handlebars was a thing. We called those templates HTML. And HTML worked fine, thank you very much. Handlebars, though, is not what the cool kids are calling HTML these days. No, it&rsquo;s a templating library, and it has logic. It has <code>if</code>s and <code>for</code>s and anybody who&rsquo;s anybody these days adds in pluralization helpers, i18n&hellip; The list goes on. But when it comes down to it, in most cases, logicless templates are just a bad, underpowered frameworks.</p>
+
+<p>When I was 16 and Handlebars came onto the scene, I fell for that logicless bullcrap hook, line, and sinker. Naive, 16-year-old me ate that shit up. Separation of concerns? Yes please. That whole promise of having your designers be able to edit your markup without knowing code? That totally worked out. Cause checking in changes and navigating through codebases in general is oh so much easier than understanding trivial <code>if</code> clauses. Cause, you know, non-engineers are completely incompetent. And retard. (Except not really&hellip;)</p>
+
+<p>No. Logicless templates don&rsquo;t even make sense. They have all kinds of logic. And you know what else they have all kind of? Broken, empty promises.</p>
+
+<p>You remember that one about designers taking over the templates? Well, they changed things and wondered why the code didn&rsquo;t work if the h1 was an h2 (because we wrote shitty selectors), or how come the link stopped working when they changed an anchor to a div (because we care about semantics).</p>
+
+<p>Plus they fucked up the commit log.</p>
+
+<p>I&rsquo;ve talked to exactly zero people employed with the sole task of marking up HTML and merrily committing this with their magical suprise knowledge of Git&hellip; No, this person is a rumor. That designer that can magically commit changes, navigate the codebase, and knows HTML and CSS and logic&hellip; we have a special title for that type of designer: &ldquo;engineer&rdquo;.</p>
+
+<p>There&rsquo;s an inherent coupling of semantics (markup) and events (code) in well designed applications. And separating it isn&rsquo;t always necessary, and is sometimes very, very wrong.</p>
+
+<h2><a name="logic-is-unavoidable">Logic Is Unavoidable</a></h2>
+
+<p>Wouldn&rsquo;t it be great if our apps didn&rsquo;t need logic? Wouldn&rsquo;t it be great if we could just smash our foreheads on the power button of our servers, and the paycheques would start flying through the cracks in the door, like Harry Potter&rsquo;s letters from Hogwarts?</p>
+
+<p>Cause those are the servers I want. So too bad they don&rsquo;t exist.</p>
+
+<p>Why? We need logic. Sometimes, we have logic we don&rsquo;t need. A lot of times, sometimes. But the fact remains: we need logic.</p>
+
+<p>Logicless templates <em>at best</em> just shift this logic into some separate layer, the presentation layer, or&ndash;worse&ndash;to the view. Probably the only thing worse than bad templates is bad views.</p>
+
+<p>Presentation layers help slim down your OMG-fat views. They&rsquo;re not a bad thing. But there&rsquo;s certain logic, render-logic, that belongs at the render level: pluralization and date-formating are prime examples.</p>
+
+<p>It&rsquo;s possible to imagine a blog post with a <code>created_at</code> timestamp attached to it. It&rsquo;s possible to imagine you&rsquo;d display this in three separate places, in three different formats. What benefit do you get from hiding that in the presentation layer? Zilch.</p>
+
+<p>And don&rsquo;t even get me started on pluralization&hellip; It usually only takes one time before you, a sane developer, has the thought cross your head, &ldquo;Weeeeeell, pluralization isn&rsquo;t <em>really</em> logic&hellip;&rdquo; And you go fishing through Github for a pluralization helper, trying to con yourself into believing that Handlebar Moustaches are still cool.</p>
+
+<p>There&rsquo;s a very debatable line about which mutations should be done in the presentation layer and which at the render level. But the line that says &ldquo;none of this should happen at the render level&rdquo; &hellip; that line is imaginary, and hardly ever followed even when using &ldquo;logicless&rdquo; templates. The separation of concerns there, is a lot of times, just separation for the sake of it. It&rsquo;s just a big waste of time and bad design.</p>
+
+<p>But I can see the headlines now: &ldquo;ALL YOUR LOGIC ARE BELONG TO TEMPLATES&rdquo;. I can see them already. It&rsquo;s not what I advocate. It&rsquo;s not what I say. But whatever.</p>
+]]></content>
+    
+  </entry>
   
   <entry>
     
