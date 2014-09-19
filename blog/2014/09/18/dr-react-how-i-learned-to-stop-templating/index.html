@@ -1,0 +1,332 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Dr. React: How I Learned to Stop Templating, and Love the Component - Meditations</title>
+  <meta name="author" content="Cuzzo">
+
+  
+  <meta name="description" content="The problem with React&ndash;or at least showing off its good side&ndash;is&hellip; what it solves isn&rsquo;t obvious. It reminds me of Docker in &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://cuzzo.github.io/blog/2014/09/18/dr-react-how-i-learned-to-stop-templating">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Meditations" type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+  
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner">
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:cuzzo.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+  
+    
+      <h1 class="entry-title">Dr. React: How I Learned to Stop Templating, and Love the Component</h1>
+    
+  
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-18T00:42:39-07:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>The problem with React&ndash;or at least showing off its good side&ndash;is&hellip; what it solves isn&rsquo;t obvious. It reminds me of Docker in that way. If you&rsquo;re unfamiliar with Docker, it&rsquo;s too slick to one-line, but the gist is this: it&rsquo;s a container for your system configuration. Think Python/Ruby Virtual Environments, but for your config. And in the same way, if you spent much time with Virtual Environments, you know how you&rsquo;d never go back to the Dark Days before. Docker is like that, like the Renaissance, but for your config. Once you Dock, you just can&rsquo;t stop.</p>
+
+<p>See, Docker has this succinct, obvious anology that makes conveying its benefits easy. Plus there&rsquo;s that Pringles thing&hellip; React doesn&rsquo;t have either.</p>
+
+<p>The problem with React is, we&rsquo;ve learned to love MVC, and React is something different. We&rsquo;ve become so accustomed to MVC, and now Facebook comes around with this <em>other</em> thing, and how can we <em>not</em> be skeptical?</p>
+
+<p>The problem with React is, it doesn&rsquo;t have templates. And templates are awesome! If React doesn&rsquo;t have templates then -1 points to House Facebook, right?</p>
+
+<p>The problem with React is, since it doesn&rsquo;t have templates, you cram some pseudo-HTML into your JavaScript, and then it&rsquo;s like bad PHP all over again. And what&rsquo;s worse than bad PHP? Nothing.</p>
+
+<p>The problem with React is, since there&rsquo;s this pseudo-HTML in your &ldquo;view&rdquo;, you get the negatives of Coffee Script in that your &ldquo;views&rdquo; need to be compiled to JavaScript before they&rsquo;re executable in the browser. If all React is, mainly, is a different take on a views, how isn&rsquo;t it just a shitty view?</p>
+
+<p>Well, what if all React&rsquo;s &ldquo;problems&rdquo;, aren&rsquo;t actually problems? What if it just seems like React has problems, but realy&hellip; it&rsquo;s just solving the problems you already have?</p>
+
+<p>React does just that and more. Here&rsquo;s <strong>TL;DR</strong>:</p>
+
+<ul>
+<li><a href="#react-is-fast">React Is Fast</a></li>
+<li><a href="#components-fix-templates">React Components Fix Templates</a></li>
+</ul>
+
+
+<h2><a name="react-is-fast">React Is Fast</a></h2>
+
+<p>There&rsquo;s a lot of reasons why React rocks, but the prime one, probably the only reason you&rsquo;re interested in React, is that it&rsquo;s really, really fast.</p>
+
+<p>An infinite pile of articles explain, in detail, how React is so fast, and why nothing else really has a chance to compete with it. How React gets its speed comes down mostly to this: manipulating the DOM is probably the most expensive thing you do in JavaScript. React uses an O(1) DIFF algorithm to never manipulate the DOM unless it needs to, and to manipulate it only in the smallest possible way, to cause the least amount of computation possible. Nothing else does this. Nothing else can.</p>
+
+<p>See, whenever you do a <code>render()</code> on a view/element in Backbone <em>usually</em> you cause this expensive thing called a <a href="https://developer.mozilla.org/en-US/docs/Notes_on_HTML_Reflow">reflow</a> to occur, and always you trigger a non-dismissable <code>repaint</code>. If you code in pure black-magic, you can get around this in Angular or Backbone or any framework really, but the point is, you need to constantly be thinking about it, instead of, oh, I don&rsquo;t know, your actual application&hellip; Whereas with React, you don&rsquo;t. And the point is, even if you think you&rsquo;re doing it right, you&rsquo;re still probably not. And, the better thing is, if you&rsquo;re not thinking about <code>reflow</code>s at all, you&rsquo;ve got more time to think about your application. Remember&hellip; It&rsquo;s the application, Stupid!</p>
+
+<p>If you think of it at the simple level, this whole DIFFing business seems like overkill, right? It seems like Facebook invented the 747 because they needed to get over a centimeter wide crack. If I need to change the text in the username paragraph element when the user logs in, why not just do it? Like Nike. Easy-peazy, lemon squeezy, right? Not exactly. We realized doing all these things manually wasn&rsquo;t feasable a <em>long</em> time ago. But let&rsquo;s play devil&rsquo;s advocate and think: &ldquo;You know&hellip; what&rsquo;s the big deal just removing that element, and replacing it with a new one, like in Backbone?&rdquo; Because in terms of performance, that actually is a big deal, even for one element, but, overall, point taken. It seems like DIFFing the entire DOM is a little complex for this.</p>
+
+<p>So why did Facebook create this crazy React thing then? Okay, bear with me. Pretend you have a list of&hellip; I don&rsquo;t know&hellip; Tweets, or in Facebook&rsquo;s case, Fweets, or whatever&hellip; There&rsquo;s hundreds of them, whatever they are, on the page, right? With Backbone, Angular, or anything else, whenever you change one of those, you usually just re-render this <em>entire</em> fat-ass list. It&rsquo;s really common. It&rsquo;s like the most common thing you do when using Backbone. It&rsquo;s like Backbone 101, and it&rsquo;s inefficient. Impressively, unbearably inefficient. React figures out that the only change in the entire list of Fweets was this &ldquo;OMG IMPORTANT UPDATE&rdquo; adding one new emoji to Jessie Smith&rsquo;s fifteenth selfie this minute.</p>
+
+<p>React sees that just the one paragraph element changed, and it <em>only</em> changes that. The effects of this can and do frequently have <em>huge</em> perfermance benefits.</p>
+
+<h2><a name="components-fix-templates">React Components Fix Templates</a></h2>
+
+<p>So React is fast? But performance isn&rsquo;t everything, is it? As developers, we constantly make decisions whether to do something for efficiency, maintainability, or readability. There&rsquo;s options, and we choose what makes the most sense.</p>
+
+<p>And React&rsquo;s &ldquo;templates&rdquo; are ugly. So ugly. They look like this:</p>
+
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">App</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">getInitialState</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="nx">getTodoState</span><span class="p">();</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">componentDidMount</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">TodoStore</span><span class="p">.</span><span class="nx">addChangeListener</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">_onChange</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">componentWillUnmount</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">TodoStore</span><span class="p">.</span><span class="nx">removeChangeListener</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">_onChange</span><span class="p">);</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="cm">/**</span>
+</span><span class='line'><span class="cm">   * @return {object}</span>
+</span><span class='line'><span class="cm">   */</span>
+</span><span class='line'>  <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="p">(</span>
+</span><span class='line'>      <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span>
+</span><span class='line'>        <span class="o">&lt;</span><span class="nx">Header</span> <span class="o">/&gt;</span>
+</span><span class='line'>        <span class="o">&lt;</span><span class="nx">MainSection</span>
+</span><span class='line'>          <span class="nx">allTodos</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">allTodos</span><span class="p">}</span>
+</span><span class='line'>          <span class="nx">areAllComplete</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">areAllComplete</span><span class="p">}</span>
+</span><span class='line'>        <span class="o">/&gt;</span>
+</span><span class='line'>        <span class="o">&lt;</span><span class="nx">Footer</span> <span class="nx">allTodos</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">state</span><span class="p">.</span><span class="nx">allTodos</span><span class="p">}</span> <span class="o">/&gt;</span>
+</span><span class='line'>      <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span><span class='line'>    <span class="p">);</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">_onChange</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">(</span><span class="nx">getTodoState</span><span class="p">());</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+
+<p>That looks awful! At first&hellip; If you look at the <code>render()</code> function, that&rsquo;s roughly equivalent to what you see in most templates. That JSX-style markup is apples to oranges with something like Jade or HAML or Handlebars or whatever. Personally, I don&rsquo;t care for it. But, honestly, it&rsquo;s beside the point. The point is, there&rsquo;s this vague idea of a template, and React more or less has it, and it works exactly as you expect.</p>
+
+<p>You might notice those multi-line HTML elements and think they look bizare, but Facebook is just <a href="/blog/2014/08/29/80-characters-is-enough/">obeying the 80-character line limit</a> here. No, in the <code>render()</code> function, there&rsquo;s really nothing strange. The real difference is that the &ldquo;template&rdquo; is wrapped inside a function, in an object, in a JavaScript file.</p>
+
+<p>That sounds terrible! At first&hellip; But if you think of it from an Object Oriented perspective, this organization makes sense. <a href="/blog/2014/09/16/and-then-there-werent-templates/" title="Template's don't make sense">Templates don&rsquo;t</a>. And, if you really want to separate the markup, you easily can with a pretty trivial preprocessor. I was originally going to do that, because of all the backlash I hear about JSX/inline-HTML. But, you know what? The more I use React, the more it seems <em>bad</em> to separate markup from its events. There&rsquo;s an inherent coupling between the two. So why separate it? Just for the sake of it?</p>
+
+<p>You&rsquo;re probably running through templates in your head, thousand-line long files streaming through your brain, and imagining all that in a component. Stop that nightmare now. That&rsquo;s how templates work. It&rsquo;s not how components work. This alone is proof how impractical the view/template pattern is. Do those hundreds of lines of markup really correspond to anything meaningful? Or was it just arbitrarilly split at some indeterminate length because some portion was reusable in some other place? That kind of segmentation probably doesn&rsquo;t lead to the world&rsquo;s best designed app&hellip;</p>
+
+<p>And what React has, and is built around, is a great way to design your app. It has state and data-bindings to automatically update the DOM. It&rsquo;s got the best testing utilities I&rsquo;ve used in a front-end framework. There&rsquo;s tons of things I love about React, but all you really need to know is that it&rsquo;s faster than everything else. Just give it a try. Once you get through a few components, you&rsquo;ll never want to &ldquo;template&rdquo; again. By the time you get to testing, you&rsquo;ll be scratching your head, and thinking, &ldquo;I know there&rsquo;s not that Pringles thing, but what about&hellip; Once you go React, you never go back?&rdquo;</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Cuzzo</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-18T00:42:39-07:00" pubdate data-updated="true"></time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://cuzzo.github.io/blog/2014/09/18/dr-react-how-i-learned-to-stop-templating/" data-via="" data-counturl="http://cuzzo.github.io/blog/2014/09/18/dr-react-how-i-learned-to-stop-templating/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/09/16/and-then-there-werent-templates/" title="Previous Post: And Then There Weren't Templates">&laquo; And Then There Weren't Templates</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/09/18/dr-react-how-i-learned-to-stop-templating/">Dr. React: How I Learned to Stop Templating, and Love the Component</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/09/16/and-then-there-werent-templates/">And Then There Weren't Templates</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/09/14/logicless-templates-lol/">Logicless Templates: LOL</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/29/80-characters-is-enough/">80 Characters Is Enough</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/08/25/pretty-code-ugly/">Pretty Code Ugly</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 - Cuzzo <br/>
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a>, customized with <a href="https://github.com/mjhea0/whiterspace">whiterspace</a>.</span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
