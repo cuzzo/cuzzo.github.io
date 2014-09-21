@@ -4,7 +4,7 @@
   <title><![CDATA[Meditations]]></title>
   <link href="http://cuzzo.github.io/atom.xml" rel="self"/>
   <link href="http://cuzzo.github.io/"/>
-  <updated>2014-09-19T16:08:22-07:00</updated>
+  <updated>2014-09-20T17:18:16-07:00</updated>
   <id>http://cuzzo.github.io/</id>
   <author>
     <name><![CDATA[Cuzzo]]></name>
@@ -61,7 +61,7 @@
 
 <p>Why? We need logic. Sometimes, we have logic we don&rsquo;t need. A lot of times, sometimes. But the fact remains: we need logic.</p>
 
-<p>Logicless templates <em>at best</em> just shift this logic into some separate layer, the presentation layer, or&ndash;worse&ndash;to the view. Probably the only thing worse than bad templates is bad views.</p>
+<p>Logicless templates <em>at best</em> just shift this logic into some separate layer, the presentation layer, or&ndash;worse&ndash;to the controller. Probably the only thing worse than bad templates is bad controllers.</p>
 
 <p>Presentation layers help slim down your OMG-fat views. They&rsquo;re not a bad thing. But there&rsquo;s certain logic, render-logic, that belongs at the render level: pluralization and date-formating are prime examples.</p>
 
