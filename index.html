@@ -9,7 +9,7 @@
   <meta name="author" content="Cuzzo">
 
   
-  <meta name="description" content="Logicless: To be devoid of logic. Merriam-Webster&rsquo;s Dictionary Babies are logicless, right? They eat and they shit. They throw toy blocks to &hellip;">
+  <meta name="description" content="Ever bought that one outfit which looked so good that, for three days post-purchase, you didn&rsquo;t take it off once? Not even to sleep or shower &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -61,6 +61,211 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+  
+    
+      <h1 class="entry-title"><a href="/blog/2014/09/16/and-then-there-werent-templates/">And Then There Weren't Templates</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-09-16T23:41:41-07:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Ever bought that one outfit which looked so good that, for three days post-purchase, you didn&rsquo;t take it off once? Not even to sleep or shower or anything. You looked so good on Friday, so you wore it on Saturday, and by the time Sunday rolled around, you were making plans based on who hadn&rsquo;t seen your outfit yet. Forget about what you actually wanted to do&hellip; This outfit! It&rsquo;s more imporatnt. Remember that outfit?</p>
+
+<p>That&rsquo;s templates.</p>
+
+<p>Remember how aweful web development was before templates? And then batManVC swooped in and cleaned up our Spaghetti Gotham codebases. It was awesome. So awesome, in fact, that we never really stopped to think: does this actually make any sense? Because I distinctively remember scratching my chin when I got to the part about templates and saying, &ldquo;is there a silent T in here somewhere?&rdquo; It didn&rsquo;t make sesnse. So you went back to the part about views and all it said was: &ldquo;Weeeeeeeell, it&rsquo;s not <em>really</em> a page, but just think of it as one.&rdquo; Remember how that didn&rsquo;t make sense? The whole V business seemed fishy. It wasn&rsquo;t a page, but it was. Plus it was a template&hellip;. And is it any coincidence that villain and view both start with V? No. But that villainous side of views didn&rsquo;t become obvious until recently.</p>
+
+<p>And it was just like your shiny, new outfit. It wasn&rsquo;t until years later, when you looked back through your Facebook pictures with fingers crossed, thinking, &ldquo;Please don&rsquo;t have on the technicolored windbreaker, the aviators, and the Loudmouths. Please&hellip;&rdquo; that it hit you: your outfit was stupid. <strong>YOU</strong> were stupid.</p>
+
+<p>Which is just like now, when you&rsquo;re navigating a new codebase and saying, &ldquo;Please don&rsquo;t have meaningless, shitty templates. Please don&rsquo;t.&rdquo; But it always does. It never fails. Yet somehow we never piece it together, that maybe&hellip; just maybe&hellip; the system is flawed.</p>
+
+<p>I mean, what do views/templates do in the first place? They make up a page, right? Sort of. Not really. But even if it is a page&hellip; that brings me to the question: in the age of single-page apps, what&rsquo;s a page?</p>
+
+<p>We still have indexes and details and update pages and so on. But in the sidebar, there&rsquo;s all kind of things going on. There&rsquo;s modals (God, are there modals). There&rsquo;s stuff in the footer. You can log in from the header. You can post selfies right to your Facebook from the header! And you can even look at your dumb-ass technicolored windbreaker in the footer if you want to. But you don&rsquo;t want to.</p>
+
+<p>There&rsquo;s an infinite possibility of &ldquo;pages&rdquo; you could be on, on any one &ldquo;page&rdquo;. So why do we still have &ldquo;views&rdquo; when our &ldquo;pages&rdquo; are mostly a collection of mini-views now?</p>
+
+<p>And what about our friend Silent T, the template? He can lay low and render a single list item, or do it big and render the entire layout, or anything in between like the header or the user details, or whatever you feel like, really. And why can Silent T do all this? Because templates don&rsquo;t make any sense either.</p>
+
+<h2>Why Do We Have Templates In the First Place?</h2>
+
+<p>Remember the first time that special someone was coming to the crib? Your room was a wreck. Sweaty gym clothes piled up in the corner, empty Russian Standards littered the floor, and there was pizza sauce all over the ceiling. So what did you do? You threw everything you could into the bathroom, and covered up the ceiling with your favorite poster of Fight Club.</p>
+
+<p>And did that really solve anything? No. When your date showed up, you realized you forgot about the macaroni and cheese by the door, and you&rsquo;d gotten so used to how bad your roommate&rsquo;s ankle braces smelled that you forgot to drop a Fabreeze Bomb. And of course, guess who went straight to the bathroom to tidy up?</p>
+
+<p>And this is exactly how templates came to be. Somebody was going through some shitty PHP and said, &ldquo;You know&hellip; what would make this file look a lot better is if I put all this shitty HTML somewhere else.&rdquo;</p>
+
+<p>And sure, all that &ldquo;cleaning&rdquo; made the bedroom look better, but the dorm room as a whole&hellip; it didn&rsquo;t improve. It was just a facade. And it couldn&rsquo;t even fake-out someone failing English 98.</p>
+
+<p>So the fact that we had shittily organized HTML wasn&rsquo;t really fixed at all by just moving it somewhere else. We didn&rsquo;t address our shittily designed HTML, we just put it somewhere new. And that, my friends, is how we got the view. The V. The villain.</p>
+
+<h2>So Templates Suck. What&rsquo;s Better?</h2>
+
+<p>The data guys must be the smart guys. Becuase they looked at the model and said, &ldquo;You know&hellip; one letter isn&rsquo;t really adequate here. We need DAOs and DTOs and maybe a DSL just to interact with the storage engines.&rdquo; Most MVCs shipped with an ORM from the get-go.</p>
+
+<p>And controllers&hellip; any framework that was any framework had a routing framework.</p>
+
+<p>But for views, us front-end guys, we just kept smashing our face on the V key, and hoping that if we split our templates up enough, maybe we wouldn&rsquo;t keep ending up with spaghetti.</p>
+
+<p>But that never happened. No matter what ingredients we put into the pot: quinoa, oyster, hummus&hellip; it was always the same. Spaghetti every time. We started off with lots of logic in the templates, we tried out logicless templates (lol). We tried presentation layers. We tried everything&hellip; except getting rid of templates.</p>
+
+<p>So maybe it&rsquo;s time.</p>
+
+<p>And why is this? Because templates don&rsquo;t correspond to anything meaningful in a single-page app. Pages are made up of mini-views, Components if you will.</p>
+
+<p>Think like MVC. What are the templates for an autocompleter? Easy. 1: autocomplete.html.hbs. Oh, but what about JavaScript? There will be JavaScript&hellip; we also have: autocomplete.js.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="c">&lt;!-- autocomplete.html.hbs --&gt;</span>
+</span><span class='line'><span class="nt">&lt;form&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;select&gt;</span>
+</span><span class='line'>    <span class="c">&lt;!-- suggestions will go here --&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;/select&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span> <span class="na">value=</span><span class="s">&quot;search&quot;</span> <span class="nt">/&gt;</span>
+</span><span class='line'><span class="nt">&lt;/form&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// autocomplete.js</span>
+</span><span class='line'><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;[type=\&quot;text\&quot;]&quot;</span><span class="p">).</span><span class="nx">keyPress</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">ev</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">});</span>
+</span><span class='line'><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;select&quot;</span><span class="p">).</span><span class="nx">change</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">ev</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">});</span>
+</span><span class='line'><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;form&quot;</span><span class="p">).</span><span class="nx">submit</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">ev</span><span class="p">)</span> <span class="p">{</span> <span class="cm">/* ... */</span> <span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Let&rsquo;s think like an Object Oriented Programmer instead. We have a textfield with a lot of logic: when the user enters so much text, we want to run a query. We have a dropdown list of suggestions with a lot of logic: when the user updates the querystring, we want to filter out what&rsquo;s no good while we await our autocomplete ElasticSearch responses. And maybe each of these dropdown suggestions has a lot of logic: maybe they each show an image of some purchasable item, and maybe a link to that item, and to the manufacturer as well&hellip; Maybe you want all your suggestions to slowly turn into Nyan Cat. I don&rsquo;t know!</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// searchbar.jsx</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">Searchbar</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+</span><span class='line'>  <span class="nx">on_key_press</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">ev</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">//</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="p">(</span>
+</span><span class='line'>      <span class="o">&lt;</span><span class="nx">input</span>
+</span><span class='line'>          <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span>
+</span><span class='line'>          <span class="nx">onKeyPress</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">on_key_press</span><span class="p">}</span> <span class="o">/&gt;</span>
+</span><span class='line'>    <span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// suggestion-list.jsx</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">SuggestionList</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+</span><span class='line'>  <span class="nx">on_change</span><span class="o">:</span> <span class="nx">fundo</span> <span class="nx">we</span> <span class="nx">still</span> <span class="nx">have</span>
+</span><span class='line'>  <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="p">(</span>
+</span><span class='line'>      <span class="o">&lt;</span><span class="nx">select</span> <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">on_change</span><span class="p">}</span><span class="o">&gt;</span>
+</span><span class='line'>        <span class="c">&lt;!--</span> <span class="nx">suggestions</span> <span class="nx">go</span> <span class="nx">here</span> <span class="o">--&gt;</span>
+</span><span class='line'>      <span class="o">&lt;</span><span class="err">/select&gt;</span>
+</span><span class='line'>    <span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// suggestion.jsx</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">Suggestion</span> <span class="o">=</span> <span class="nx">React</span><span class="p">.</span><span class="nx">createClass</span><span class="p">({</span>
+</span><span class='line'>  <span class="nx">render</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">return</span> <span class="p">(</span>
+</span><span class='line'>      <span class="o">&lt;</span><span class="nx">option</span> <span class="nx">value</span><span class="o">=</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">value</span><span class="p">}</span><span class="o">&gt;</span><span class="p">{</span><span class="k">this</span><span class="p">.</span><span class="nx">props</span><span class="p">.</span><span class="nx">text</span><span class="p">}</span><span class="o">&lt;</span><span class="err">/option&gt;</span>
+</span><span class='line'>    <span class="p">);</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>As you can see, before we had our markup separated from our code. But why? Because it looks better? Sure, if you want to keep doing that, fine. But, remember how cool that windbraker was at 17? This type of separation is the same way&hellip; it&rsquo;s separation for the sake of it. The unquestionable thing here is: it&rsquo;s better to think of HTML elements as objects. It&rsquo;s better to think in terms of components than in terms of templates.</p>
+
+<p>I mean, when&rsquo;s the last time you went through Github and found a template for your webapp? Never.</p>
+
+<p>But with a well-designed component. That&rsquo;s possible.</p>
+
+<p>So why are we still stuck on templates? Why are we covering up pizza on the ceiling with posters of Fight Club? Why don&rsquo;t we actually clean up the mess, think of elements and the events attached to them, and come to the logical conclusion that it&rsquo;s all probably one object that belongs in one file, as one object?</p>
+
+<p>Or are we going to wear our Loudmouths to the grave?</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -526,6 +731,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/09/16/and-then-there-werent-templates/">And Then There Weren't Templates</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/09/14/logicless-templates-lol/">Logicless Templates: LOL</a>

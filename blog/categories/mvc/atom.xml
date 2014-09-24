@@ -4,7 +4,7 @@
   <title><![CDATA[Category: mvc | Meditations]]></title>
   <link href="http://cuzzo.github.io/blog/categories/mvc/atom.xml" rel="self"/>
   <link href="http://cuzzo.github.io/"/>
-  <updated>2014-09-20T17:18:16-07:00</updated>
+  <updated>2014-09-24T11:49:05-07:00</updated>
   <id>http://cuzzo.github.io/</id>
   <author>
     <name><![CDATA[Cuzzo]]></name>
@@ -12,6 +12,130 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[And Then There Weren't Templates]]></title>
+    <link href="http://cuzzo.github.io/blog/2014/09/16/and-then-there-werent-templates/"/>
+    <updated>2014-09-16T23:41:41-07:00</updated>
+    <id>http://cuzzo.github.io/blog/2014/09/16/and-then-there-werent-templates</id>
+    <content type="html"><![CDATA[<p>Ever bought that one outfit which looked so good that, for three days post-purchase, you didn&rsquo;t take it off once? Not even to sleep or shower or anything. You looked so good on Friday, so you wore it on Saturday, and by the time Sunday rolled around, you were making plans based on who hadn&rsquo;t seen your outfit yet. Forget about what you actually wanted to do&hellip; This outfit! It&rsquo;s more imporatnt. Remember that outfit?</p>
+
+<p>That&rsquo;s templates.</p>
+
+<p>Remember how aweful web development was before templates? And then batManVC swooped in and cleaned up our Spaghetti Gotham codebases. It was awesome. So awesome, in fact, that we never really stopped to think: does this actually make any sense? Because I distinctively remember scratching my chin when I got to the part about templates and saying, &ldquo;is there a silent T in here somewhere?&rdquo; It didn&rsquo;t make sesnse. So you went back to the part about views and all it said was: &ldquo;Weeeeeeeell, it&rsquo;s not <em>really</em> a page, but just think of it as one.&rdquo; Remember how that didn&rsquo;t make sense? The whole V business seemed fishy. It wasn&rsquo;t a page, but it was. Plus it was a template&hellip;. And is it any coincidence that villain and view both start with V? No. But that villainous side of views didn&rsquo;t become obvious until recently.</p>
+
+<p>And it was just like your shiny, new outfit. It wasn&rsquo;t until years later, when you looked back through your Facebook pictures with fingers crossed, thinking, &ldquo;Please don&rsquo;t have on the technicolored windbreaker, the aviators, and the Loudmouths. Please&hellip;&rdquo; that it hit you: your outfit was stupid. <strong>YOU</strong> were stupid.</p>
+
+<p>Which is just like now, when you&rsquo;re navigating a new codebase and saying, &ldquo;Please don&rsquo;t have meaningless, shitty templates. Please don&rsquo;t.&rdquo; But it always does. It never fails. Yet somehow we never piece it together, that maybe&hellip; just maybe&hellip; the system is flawed.</p>
+
+<p>I mean, what do views/templates do in the first place? They make up a page, right? Sort of. Not really. But even if it is a page&hellip; that brings me to the question: in the age of single-page apps, what&rsquo;s a page?</p>
+
+<p>We still have indexes and details and update pages and so on. But in the sidebar, there&rsquo;s all kind of things going on. There&rsquo;s modals (God, are there modals). There&rsquo;s stuff in the footer. You can log in from the header. You can post selfies right to your Facebook from the header! And you can even look at your dumb-ass technicolored windbreaker in the footer if you want to. But you don&rsquo;t want to.</p>
+
+<p>There&rsquo;s an infinite possibility of &ldquo;pages&rdquo; you could be on, on any one &ldquo;page&rdquo;. So why do we still have &ldquo;views&rdquo; when our &ldquo;pages&rdquo; are mostly a collection of mini-views now?</p>
+
+<p>And what about our friend Silent T, the template? He can lay low and render a single list item, or do it big and render the entire layout, or anything in between like the header or the user details, or whatever you feel like, really. And why can Silent T do all this? Because templates don&rsquo;t make any sense either.</p>
+
+<h2>Why Do We Have Templates In the First Place?</h2>
+
+<p>Remember the first time that special someone was coming to the crib? Your room was a wreck. Sweaty gym clothes piled up in the corner, empty Russian Standards littered the floor, and there was pizza sauce all over the ceiling. So what did you do? You threw everything you could into the bathroom, and covered up the ceiling with your favorite poster of Fight Club.</p>
+
+<p>And did that really solve anything? No. When your date showed up, you realized you forgot about the macaroni and cheese by the door, and you&rsquo;d gotten so used to how bad your roommate&rsquo;s ankle braces smelled that you forgot to drop a Fabreeze Bomb. And of course, guess who went straight to the bathroom to tidy up?</p>
+
+<p>And this is exactly how templates came to be. Somebody was going through some shitty PHP and said, &ldquo;You know&hellip; what would make this file look a lot better is if I put all this shitty HTML somewhere else.&rdquo;</p>
+
+<p>And sure, all that &ldquo;cleaning&rdquo; made the bedroom look better, but the dorm room as a whole&hellip; it didn&rsquo;t improve. It was just a facade. And it couldn&rsquo;t even fake-out someone failing English 98.</p>
+
+<p>So the fact that we had shittily organized HTML wasn&rsquo;t really fixed at all by just moving it somewhere else. We didn&rsquo;t address our shittily designed HTML, we just put it somewhere new. And that, my friends, is how we got the view. The V. The villain.</p>
+
+<h2>So Templates Suck. What&rsquo;s Better?</h2>
+
+<p>The data guys must be the smart guys. Becuase they looked at the model and said, &ldquo;You know&hellip; one letter isn&rsquo;t really adequate here. We need DAOs and DTOs and maybe a DSL just to interact with the storage engines.&rdquo; Most MVCs shipped with an ORM from the get-go.</p>
+
+<p>And controllers&hellip; any framework that was any framework had a routing framework.</p>
+
+<p>But for views, us front-end guys, we just kept smashing our face on the V key, and hoping that if we split our templates up enough, maybe we wouldn&rsquo;t keep ending up with spaghetti.</p>
+
+<p>But that never happened. No matter what ingredients we put into the pot: quinoa, oyster, hummus&hellip; it was always the same. Spaghetti every time. We started off with lots of logic in the templates, we tried out logicless templates (lol). We tried presentation layers. We tried everything&hellip; except getting rid of templates.</p>
+
+<p>So maybe it&rsquo;s time.</p>
+
+<p>And why is this? Because templates don&rsquo;t correspond to anything meaningful in a single-page app. Pages are made up of mini-views, Components if you will.</p>
+
+<p>Think like MVC. What are the templates for an autocompleter? Easy. 1: autocomplete.html.hbs. Oh, but what about JavaScript? There will be JavaScript&hellip; we also have: autocomplete.js.</p>
+
+<p>&#8220;`html</p>
+
+<!-- autocomplete.html.hbs -->
+
+
+<p><form>
+  <input type="text" />
+  <select>
+    <!-- suggestions will go here -->
+  </select>
+  <input type="submit" value="search" />
+</form>
+&#8220;`</p>
+
+<pre><code class="javascript">// autocomplete.js
+$("[type=\"text\"]").keyPress(function(ev) { /* ... */ });
+$("select").change(function(ev) { /* ... */ });
+$("form").submit(function(ev) { /* ... */ });
+</code></pre>
+
+<p>Let&rsquo;s think like an Object Oriented Programmer instead. We have a textfield with a lot of logic: when the user enters so much text, we want to run a query. We have a dropdown list of suggestions with a lot of logic: when the user updates the querystring, we want to filter out what&rsquo;s no good while we await our autocomplete ElasticSearch responses. And maybe each of these dropdown suggestions has a lot of logic: maybe they each show an image of some purchasable item, and maybe a link to that item, and to the manufacturer as well&hellip; Maybe you want all your suggestions to slowly turn into Nyan Cat. I don&rsquo;t know!</p>
+
+<pre><code class="javascript">// searchbar.jsx
+var Searchbar = React.createClass({
+  on_key_press: function(ev) {
+    //
+  },
+
+  render: function() {
+    return (
+      &lt;input 
+          type="text"
+          onKeyPress={this.on_key_press} /&gt;
+    );
+  }
+});
+</code></pre>
+
+<pre><code class="javascript">// suggestion-list.jsx
+var SuggestionList = React.createClass({
+  on_change: fundo we still have
+  render: function() {
+    return (
+      &lt;select onChange={this.on_change}&gt;
+        &lt;!-- suggestions go here --&gt;
+      &lt;/select&gt;
+    );
+  }
+});
+</code></pre>
+
+<pre><code class="javascript">// suggestion.jsx
+var Suggestion = React.createClass({
+  render: function() {
+    return (
+      &lt;option value={this.props.value}&gt;{this.props.text}&lt;/option&gt;
+    );
+  }
+});
+</code></pre>
+
+<p>As you can see, before we had our markup separated from our code. But why? Because it looks better? Sure, if you want to keep doing that, fine. But, remember how cool that windbraker was at 17? This type of separation is the same way&hellip; it&rsquo;s separation for the sake of it. The unquestionable thing here is: it&rsquo;s better to think of HTML elements as objects. It&rsquo;s better to think in terms of components than in terms of templates.</p>
+
+<p>I mean, when&rsquo;s the last time you went through Github and found a template for your webapp? Never.</p>
+
+<p>But with a well-designed component. That&rsquo;s possible.</p>
+
+<p>So why are we still stuck on templates? Why are we covering up pizza on the ceiling with posters of Fight Club? Why don&rsquo;t we actually clean up the mess, think of elements and the events attached to them, and come to the logical conclusion that it&rsquo;s all probably one object that belongs in one file, as one object?</p>
+
+<p>Or are we going to wear our Loudmouths to the grave?</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Logicless Templates: LOL]]></title>

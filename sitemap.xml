@@ -3,6 +3,12 @@
   
   
   <url>
+    <loc>http://cuzzo.github.io/blog/2014/09/16/and-then-there-werent-templates/</loc>
+    <lastmod>2014-09-16T23:41:41-07:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>http://cuzzo.github.io/blog/2014/09/14/logicless-templates-lol/</loc>
     <lastmod>2014-09-14T22:02:24-07:00</lastmod>
     <priority>0.8</priority>
@@ -23,21 +29,21 @@
   
   <url>
     <loc>http://cuzzo.github.io/</loc>
-    <lastmod>2014-09-20T17:18:16-07:00</lastmod>
+    <lastmod>2014-09-24T11:49:05-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://cuzzo.github.io/blog/archives/</loc>
-    <lastmod>2014-09-20T17:18:16-07:00</lastmod>
+    <lastmod>2014-09-24T11:49:05-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://cuzzo.github.io/about/</loc>
-    <lastmod>2014-09-20T17:18:16-07:00</lastmod>
+    <lastmod>2014-09-24T11:49:05-07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
