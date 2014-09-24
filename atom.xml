@@ -4,7 +4,7 @@
   <title><![CDATA[Meditations]]></title>
   <link href="http://cuzzo.github.io/atom.xml" rel="self"/>
   <link href="http://cuzzo.github.io/"/>
-  <updated>2014-09-24T11:49:05-07:00</updated>
+  <updated>2014-09-24T11:49:43-07:00</updated>
   <id>http://cuzzo.github.io/</id>
   <author>
     <name><![CDATA[Cuzzo]]></name>
@@ -184,7 +184,7 @@
 
 <p>I mean, when&rsquo;s the last time you went through Github and found a template for your webapp? Never.</p>
 
-<p>But with a well-designed component. That&rsquo;s possible.</p>
+<p>But with a well-designed component, that&rsquo;s possible.</p>
 
 <p>So why are we still stuck on templates? Why are we covering up pizza on the ceiling with posters of Fight Club? Why don&rsquo;t we actually clean up the mess, think of elements and the events attached to them, and come to the logical conclusion that it&rsquo;s all probably one object that belongs in one file, as one object?</p>
 
