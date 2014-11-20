@@ -9,7 +9,7 @@
   <meta name="author" content="Cuzzo">
 
   
-  <meta name="description" content="Ever bought that one super-fly outfit that, for the three days post-purchase, you didn&rsquo;t take it off once? Not even to sleep or shower or &hellip;">
+  <meta name="description" content="In 1957, General Motors unleashed the greatest invention the world has ever known. Or at least that&rsquo;s what a lot of people thought, until &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -68,6 +68,143 @@
   <header>
   
     
+      <h1 class="entry-title"><a href="/blog/2014/11/20/javascript-in-wonderland/">JavaScript in Wonderland</a></h1>
+      
+      
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-11-20T12:35:39-08:00" pubdate data-updated="true"></time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>In 1957, General Motors unleashed the greatest invention the world has ever known. Or at least that&rsquo;s what a lot of people thought, until Cadillac Eldorados started plowing over pedestrians and crashing into other cars, highway medians, and large poles en masse. Cadillac&rsquo;s new apparatus sounded too good to be true. It had a James Bond sex appeal. It was all anyone ever wanted from a vehicle since the first man looked to the sky, and saw the birds soaring, and thought: why not me?</p>
+
+<p>Was it the flying car? No. It was better. Way better.</p>
+
+<p>In 1957, Cadillac started building gloveboxes equipped with a minibar. One day later, the population of Detroit halved, and mortuary stocks soared, as everybody who was anybody went out taking shots and the wheel simultaneously, and looking over drunkenly to their friend and saying &ldquo;following that car!&rdquo; and then, inevitably, running over several toddlers and Speed-Racing into a school bus shortly thereafter.</p>
+
+<p>Some things that look good, sound good, and even smell good&hellip; some times they&rsquo;re too good to be true. Sometimes they&rsquo;ll send you out of control over a cliff. A glovebox minibar will do this. That little white rabbit did it to Alice. And syntactic sugar will do it to you, and here&rsquo;s why:</p>
+
+<ul>
+<li><a href="#sexiness-is-subjective">Sexiness is subjective</a>.</li>
+<li><a href="#coffeescript-accomplishes-nothing">CoffeeScript accomplishes nothing</a>.</li>
+<li><a href="#accomplishing-things-is-important">Accomplishing things is important</a>.</li>
+</ul>
+
+
+<h2><a name="sexiness-is-subjective">Sexiness is subjective</a>.</h2>
+
+<p>The trouble for me with CoffeeScript is: it&rsquo;s so goddamn sexy. It cuts out the unnecessary, and it looks like English. Plus it&rsquo;s concise. Every script is like a Hemingway short story. And can you spot that McCarthy punctuation? It&rsquo;s beautiful!</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='CoffeeScript'><span class='line'><span class="nx">foo</span> <span class="nf">(x) -&gt;</span>
+</span><span class='line'>  <span class="nx">alert</span> <span class="s">&quot;Hello, </span><span class="si">#{</span><span class="nx">x</span><span class="si">}</span><span class="s">!&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">foo</span><span class="p">(</span><span class="s">&quot;World&quot;</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>I mean, just look at it! It&rsquo;s like Marilyn Monroe and James Dean had a baby. No squigglies. No parenthesis. No semicolons. No nothing. Move over <code>if !</code>ers, unless just stepped in the building. And did you hear about the rockets? The skinny ones? The fat ones? CoffeeScript gets rid of all the wastes. It leaves so much room for activities!</p>
+
+<p>But wait a minute&hellip; is sexiness really the metric with which we want to be choosing the next language for our future billion-dollar application? Isn&rsquo;t sexiness a little subjective anyhow? I mean, surely not everyone thinks CoffeeScript is sexy. And Mom&rsquo;s been harping on me for years: &ldquo;It&rsquo;s the personality that counts.&rdquo;</p>
+
+<p>And she&rsquo;s right. Justin Timberlake brought sexy back, but it&rsquo;s already gone. It isn&rsquo;t kool anymore anyway. You know what is? Readability.</p>
+
+<p>You know what&rsquo;s not readable in CoffeeScript, a function that takes a lambda as an argument. God forbid if one of the parameters is a dictionary. And what happens if you want to pass the result of function call directly to another function as a parameter?</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='CoffeeScript'><span class='line'><span class="nx">foo</span> <span class="nf">(x, y) -&gt;</span>
+</span><span class='line'>  <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span> <span class="o">*</span> <span class="nx">x</span> <span class="o">*</span> <span class="nx">y</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">bar</span> <span class="nf">(x) -&gt;</span>
+</span><span class='line'>  <span class="nx">x</span> <span class="o">+</span> <span class="mi">42</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">foo</span> <span class="mi">10</span><span class="p">,</span> <span class="nx">bar</span> <span class="mi">20</span> <span class="c1"># Is this a dictionary? A function call? WTF?</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">inject</span> <span class="nf">(x, y) -&gt;</span>
+</span><span class='line'>  <span class="nx">x</span><span class="p">[</span><span class="nx">y</span><span class="p">]</span> <span class="o">=</span> <span class="nx">y</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">inject</span>
+</span><span class='line'>  <span class="nv">x: </span><span class="nx">foo</span> <span class="mi">10</span><span class="p">,</span> <span class="nx">bar</span> <span class="mi">20</span><span class="p">,</span>
+</span><span class='line'>  <span class="nv">b: </span><span class="p">(</span><span class="nx">n</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="nx">n</span> <span class="k">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">..</span><span class="mi">5</span><span class="p">]).</span><span class="nx">reduce</span> <span class="nf">(t, s) -&gt;</span> <span class="nx">t</span> <span class="o">+</span> <span class="nx">s</span><span class="p">,</span>
+</span><span class='line'>  <span class="nv">c: </span><span class="mi">3</span><span class="p">,</span>
+</span><span class='line'>  <span class="s">&quot;Z&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="c1"># ^ I don&#39;t know what anything is anywhere in there.</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Sure, all of this can be fixed. But the problem is, like in Perl, it&rsquo;s more common to abuse features that probably shouldn&rsquo;t even exist in the first place&ndash;ahem list comprehension&ndash;than it is to use them elegantly. Assuming that code will be good is a dangerous assumption. Most code is bad. No matter how good you are, most people will think most of your code is bad. And in five years, they&rsquo;ll think it&rsquo;s even worse.</p>
+
+<p>The fact of the matter here is: it&rsquo;s a logical fallacy to say that anything that isn&rsquo;t necessary is useless. Computers are far, far better at parsing code than my mortal self. Braces help me identify dictionaries in the same way that brackets tell me I&rsquo;m accessing an index of an array. Parenthesis help me identify function calls. <code>return</code> helps me identify return statements&hellip; And even if they don&rsquo;t help you, before you go off saving ten million keystrokes per second, maybe you oughta ask yourself: is it worth it? Is saving a couple of keystrokes worth confusing a percentage of your fellow developers? Is being clever really worth alienating someone that will inherit your code?</p>
+
+<h2><a name="coffeescript-accomplishes-nothing">CoffeeScript accomplishes nothing</a>.</h2>
+
+<p>The way marketing works is: you find what&rsquo;s different about a product, and regardless of if it&rsquo;s good or not, you sell it. The way developing a good programming language works is: you identify a problem in other languages, like concurrency, and you attempt to address it. Scala does this. Clojure does this. A million new languages do this. It&rsquo;s arguable how good they are at it, but it&rsquo;s pretty objectionable they&rsquo;re designed with that intent.</p>
+
+<p>But CoffeScript? Okay, it adds inheritance, but ECMA6 does that too&hellip; And isn&rsquo;t composition the kool thing these days anyway? CoffeeScript&rsquo;s only real selling point, if we&rsquo;re being honest, is it&rsquo;s syntax. And, I don&rsquo;t think that&rsquo;s the point you should be using to go all in on CoffeeScript for your next project. I don&rsquo;t think you should follow that rabbit.</p>
+
+<p>And besides, if C-style syntax is so bad you need to rewrite your entire codebase, if it&rsquo;s so bad you don&rsquo;t mind the vast majority of your dependencies being written in a different language, if it&rsquo;s so bad you don&rsquo;t mind it being a nightmare to use some of those dependencies, if it&rsquo;s so bad you shake your finger at JavaScript and say, &ldquo;I will not write you!&rdquo;&hellip; maybe instead of installing the latest version of CoffeeScript and putting on your Fedora, what you really oughta be doing is asking yourself: why are the world&rsquo;s most-used languages all C derivatives? That alone is proof of nothing, I&rsquo;m aware. It doesn&rsquo;t make C-style syntax the best. It doesn&rsquo;t make it good. It doesn&rsquo;t even make it not-bad. No, that&rsquo;s subjective. But it does probably hint at that C-style syntax isn&rsquo;t so bad it&rsquo;s unusable. And if that&rsquo;s the conclusion you come to, just be aware that the vast majority of the programming world is disagreeing everyday with commit numbers.</p>
+
+<h2><a name="accomplishing-things-is-important">Accomplishing things is important</a>.</h2>
+
+<p>So, wait, if I can&rsquo;t use CoffeeScript because it&rsquo;s different from JavaScript, what about TypeScript and Flow? What about Java? How&rsquo;s that any different from C++? And what about Common Lisp? Don&rsquo;t fuck with my Lisp, homie.</p>
+
+<p>Well, Java gives you the JVM. And TypeScript allows you to catch compile time errors. These are the types of things that make me want or not want to use a language given a set of circumstances. Solving real problems gives me a reason to use a language. Sexiness is not a factor.</p>
+
+<p>CoffeeScript gives me inheritance. But 1) don&rsquo;t these same guys tell us to avoid that? And 2) that seems like something better suited for a library than an entirely new language. And 3) if you really just can&rsquo;t live without <code>extends</code> being a keyword in your language, couldn&rsquo;t you write a preprocessor that does that and only that?</p>
+
+<p>You could. Except CoffeeScript isn&rsquo;t about inheritance&hellip; even though that&rsquo;s all it adds&hellip; What it&rsquo;s really about is syntactical sugar. Can&rsquo;t you hear Mom warning you about sugar as we speak? Can&rsquo;t you hear her saying, &ldquo;sugar is the devil&rdquo;? Mom always knows best. Sugar is fun and sweet and we all love it, but it&rsquo;s really not good for us. She knows. She always does.</p>
+
+<p>So listen to Mom. No matter what a designer tells you, code isn&rsquo;t beautiful. It&rsquo;s data. Or at least that&rsquo;s my opinion. Now if you&rsquo;ll excuse me, I&rsquo;ll go back to writing my <a href="/blog/2014/08/25/pretty-code-ugly/">ugly code</a>.</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+  
+    
       <h1 class="entry-title"><a href="/blog/2014/09/16/and-then-there-werent-templates/">And Then There Weren't Templates</a></h1>
       
       
@@ -96,7 +233,7 @@
 
 <p>That&rsquo;s templates.</p>
 
-<p>Remember how aweful web development was before templates? And then batManVC swooped in and cleaned up our Spaghetti Gotham codebases. It was awesome. So awesome, in fact, that we never really stopped to think: does this actually make any sense? Because I distinctively remember scratching my chin when I got to the part about templates and saying, &ldquo;is there a silent T in here somewhere?&rdquo; It didn&rsquo;t make sesnse. So you went back to the part about views and all it said was: &ldquo;Weeeeeeeell, it&rsquo;s not <em>really</em> a page, but just think of it as one.&rdquo; Remember how that didn&rsquo;t make sense? The whole V business seemed fishy. It wasn&rsquo;t a page, but it was. Plus it was a template&hellip;. And is it any coincidence that villain and view both start with V? No. But that villainous side of views didn&rsquo;t become obvious until recently.</p>
+<p>Remember how awful web development was before templates? And then batManVC swooped in and cleaned up our Spaghetti Gotham codebases. It was awesome. So awesome, in fact, that we never really stopped to think: does this actually make any sense? Because I distinctively remember scratching my chin when I got to the part about templates and saying, &ldquo;is there a silent T in here somewhere?&rdquo; It didn&rsquo;t make sesnse. So you went back to the part about views and all it said was: &ldquo;Weeeeeeeell, it&rsquo;s not <em>really</em> a page, but just think of it as one.&rdquo; Remember how that didn&rsquo;t make sense? The whole V business seemed fishy. It wasn&rsquo;t a page, but it was. Plus it was a template&hellip;. And is it any coincidence that villain and view both start with V? No. But that villainous side of views didn&rsquo;t become obvious until recently.</p>
 
 <p>And it was just like your shiny, new outfit. It wasn&rsquo;t until years later, when you looked back through your Facebook pictures with fingers crossed, thinking, &ldquo;Please don&rsquo;t have on the technicolored windbreaker, the aviators, and the Loudmouths. Please&hellip;&rdquo; that it hit you: your outfit was stupid. <strong>YOU</strong> were stupid.</p>
 
@@ -112,9 +249,9 @@
 
 <h2>Why Do We Have Templates In the First Place?</h2>
 
-<p>Remember the first time that special someone was coming to the crib? Your room was a wreck. Sweaty gym clothes piled up in the corner, empty Russian Standards littered the floor, and there was pizza sauce all over the ceiling. So what did you do? You threw everything you could into the bathroom, and covered up the ceiling with your favorite poster of Fight Club.</p>
+<p>Remember the first time that special someone was coming to the crib? Your room was a wreck. Sweaty gym clothes piled up in the corner, empty Russian Standards littered the floor, and there was pizza sauce all over the ceiling. So what did you do? You threw everything you could into the bathroom, and plastered your favorite Marilyn Monroe poster over the marinara.</p>
 
-<p>And did that really solve anything? No. When your date showed up, you realized you forgot about the macaroni and cheese by the door, and you&rsquo;d gotten so used to how bad your roommate&rsquo;s ankle braces smelled that you forgot to drop a Fabreeze Bomb. And of course, guess who went straight to the bathroom to tidy up?</p>
+<p>And did that really solve anything? No. When your date showed up, you realized you forgot about the macaroni and cheese by the door, and you&rsquo;d gotten so used to how bad your roommate&rsquo;s ankle braces smelled that you forgot to drop a Fabreze Bomb. And of course, guess who went straight to the bathroom to tidy up?</p>
 
 <p>And this is exactly how templates came to be. Somebody was going through some shitty PHP and said, &ldquo;You know&hellip; what would make this file look a lot better is if I put all this shitty HTML somewhere else.&rdquo;</p>
 
@@ -124,11 +261,11 @@
 
 <h2>So Templates Suck. What&rsquo;s Better?</h2>
 
-<p>The data guys must be the smart guys. Becuase they looked at the model and said, &ldquo;You know&hellip; one letter isn&rsquo;t really adequate here. We need DAOs and DTOs and maybe a DSL just to interact with the storage engines.&rdquo; Most MVCs shipped with an ORM from the get-go.</p>
+<p>The data guys must be the smart guys. Because they looked at the model and said, &ldquo;You know&hellip; one letter isn&rsquo;t really adequate here. We need DAOs and DTOs and maybe a DSL just to interact with the storage engines.&rdquo; Most MVCs shipped with an ORM from the get-go.</p>
 
 <p>And controllers&hellip; any framework that was any framework had a routing framework.</p>
 
-<p>But for views, us front-end guys, we just kept smashing our face on the V key, and hoping that if we split our templates up enough, maybe we wouldn&rsquo;t keep ending up with spaghetti.</p>
+<p>But for views, us front-end guys, we just kept smashing our face on the V key, and hoping that if we split our templates up enough, maybe we&rsquo;d end up with chicken parm.</p>
 
 <p>But that never happened. No matter what ingredients we put into the pot: quinoa, oyster, hummus&hellip; it was always the same. Spaghetti every time. We started off with lots of logic in the templates, we tried out logicless templates (lol). We tried presentation layers. We tried everything&hellip; except getting rid of templates.</p>
 
@@ -251,13 +388,13 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>As you can see, before we had our markup separated from our code. But why? Because it looks better? Sure, if you want to keep doing that, fine. But, remember how cool that windbraker was at 17? This type of separation is the same way&hellip; it&rsquo;s separation for the sake of it. The unquestionable thing here is: it&rsquo;s better to think of HTML elements as objects. It&rsquo;s better to think in terms of components than in terms of templates.</p>
+<p>As you can see, before we had our markup separated from our code. But why? Because it looks better? Sure, if you want to keep doing that, fine. But, remember how cool that windbreaker was at 17? This type of separation is the same way&hellip; it&rsquo;s separation for the sake of it. The unquestionable thing here is: it&rsquo;s better to think of HTML elements as objects. It&rsquo;s better to think in terms of components than in terms of templates.</p>
 
 <p>I mean, when&rsquo;s the last time you went through Github and found a template for your webapp? Never.</p>
 
 <p>But with a well-designed component, that&rsquo;s possible.</p>
 
-<p>So why are we still stuck on templates? Why are we covering up pizza on the ceiling with posters of Fight Club? Why don&rsquo;t we actually clean up the mess, think of elements and the events attached to them, and come to the logical conclusion that it&rsquo;s all probably one object that belongs in one file, as one object?</p>
+<p>So why are we still stuck on templates? Why are we covering up pizza on the ceiling with a Some Like It Hot poster? Why don&rsquo;t we actually clean up the mess, think of elements and the events attached to them, and come to the logical conclusion that it&rsquo;s all probably one object that belongs in one file, as one object?</p>
 
 <p>Or are we going to wear our Loudmouths to the grave?</p>
 </div>
@@ -317,7 +454,7 @@
 
 <p>First of all, let&rsquo;s just get one thing straight. The very idea of calling Handlebars and Moustache &ldquo;logicless&rdquo; is&hellip; well&hellip; logicless. Retarded even, if you prefer. We&rsquo;ve had logicless templates, long long before Handlebars was a thing. We called those templates HTML. And HTML worked fine, thank you very much. Handlebars, though, is not what the cool kids are calling HTML these days. No, it&rsquo;s a templating library, and it has logic. It has <code>if</code>s and <code>for</code>s and anybody who&rsquo;s anybody these days adds in pluralization helpers, i18n&hellip; The list goes on. But when it comes down to it, in most cases, logicless templates are just a bad, underpowered frameworks.</p>
 
-<p>When I was 16 and Handlebars came onto the scene, I fell for that logicless bullcrap hook, line, and sinker. Naive, 16-year-old me ate that shit up. Separation of concerns? Yes please. That whole promise of having your designers be able to edit your markup without knowing code? That totally worked out. Cause checking in changes and navigating through codebases in general is oh so much easier than understanding trivial <code>if</code> clauses. Cause, you know, non-engineers are completely incompetent. And retard. (Except not really&hellip;)</p>
+<p>When I was 16 and Handlebars came onto the scene, I fell for that logicless bullcrap hook, line, and sinker. Naive, 16-year-old me ate that shit up. Separation of concerns? Yes please. That whole promise of having your designers be able to edit your markup without knowing code? That totally worked out. Cause checking in changes and navigating through codebases in general is oh so much easier than understanding trivial <code>if</code> clauses. Cause, you know, non-engineers are completely incompetent. And retarded. (Except not really&hellip;)</p>
 
 <p>No. Logicless templates don&rsquo;t even make sense. They have all kinds of logic. And you know what else they have all kind of? Broken, empty promises.</p>
 
@@ -325,7 +462,7 @@
 
 <p>Plus they fucked up the commit log.</p>
 
-<p>I&rsquo;ve talked to exactly zero people employed with the sole task of marking up HTML and merrily committing this with their magical suprise knowledge of Git&hellip; No, this person is a rumor. That designer that can magically commit changes, navigate the codebase, and knows HTML and CSS and logic&hellip; we have a special title for that type of designer: &ldquo;engineer&rdquo;.</p>
+<p>I&rsquo;ve talked to exactly zero people employed with the sole task of marking up HTML and merrily committing this with their magical surprise knowledge of Git&hellip; No, this person is a rumor. That designer that can magically commit changes, navigate the codebase, and knows HTML and CSS and logic&hellip; we have a special title for that type of designer: &ldquo;engineer&rdquo;.</p>
 
 <p>There&rsquo;s an inherent coupling of semantics (markup) and events (code) in well designed applications. And separating it isn&rsquo;t always necessary, and is sometimes very, very wrong.</p>
 
@@ -389,7 +526,7 @@
 
 <p>We&rsquo;re rule breakers. We break them for fun. We break them for profit. We speed to work. We let our kids eat cotton candy for breakfast. And so on.</p>
 
-<p>But just because we break the rules, it doesn&rsquo;t make it acceptable. It doesn&rsquo;t make the rules dismissable. And it damn well doesn&rsquo;t make that orange skirt look good with the brown terracotta jacket and the purple 10 gallon hat.</p>
+<p>But just because we break the rules, it doesn&rsquo;t make it acceptable. It doesn&rsquo;t make the rules dismissible. And it damn well doesn&rsquo;t make that orange skirt look good with the brown terracotta jacket and the purple 10 gallon hat.</p>
 
 <p>And you know what else doesn&rsquo;t look good? Long lines of code.</p>
 
@@ -416,7 +553,7 @@
 
 <p>Anyway, let&rsquo;s apply what we know about functions to lines of code. Maybe we&rsquo;ll discover something</p>
 
-<p>Any line with a lot going on is more likely to change than a line with not as much going on. And because a lot is going on, there&rsquo;s a higher likelyhood of someone submitting a pull-request to shit on your face, or break your code, or introduce a bug. And before you butt in with, &ldquo;but that&rsquo;s why we have tests&rdquo;, let me butt back with, &ldquo;do tell me about how you never have production bugs&rdquo;.</p>
+<p>Any line with a lot going on is more likely to change than a line with not as much going on. And because a lot is going on, there&rsquo;s a higher likelihood of someone submitting a pull-request to shit on your face, or break your code, or introduce a bug. And before you butt in with, &ldquo;but that&rsquo;s why we have tests&rdquo;, let me butt back with, &ldquo;do tell me about how you never have production bugs&rdquo;.</p>
 
 <p>Long lines of code are just all around terrible, even more so than long functions, methinks.</p>
 
@@ -430,13 +567,13 @@
 
 <p>But then, the White Knight swept us off our feet. It told us about Single Responsibility. It said, &ldquo;Yo homie, a function has meaning. It should do something. It should mean something. And that should only be one thing. Your functions oughta have a single responsibility.&rdquo;</p>
 
-<p>And this was divine intervetion to our cesspits we called functions. After we applied it, code started to make sense. It started to be testable. It started to be readable. The smells went away. And rainbows started appearing.</p>
+<p>And this was divine intervention to our cesspits we called functions. After we applied it, code started to make sense. It started to be testable. It started to be readable. The smells went away. And rainbows started appearing.</p>
 
-<p>But then, the rebels we are, we threw everything we learned out the window when we hopped all aboard the Lambda-Chain-Train headed straight to Hell. We started jamming ten statements (read ten responsibilities) onto a single line of code. We started making functions out of lines, and we got right back to where we started, with our functions (read lines) having multiple responsiblities, and what&rsquo;s really going on in there being a more carefully kept secret than the reveal of an Agatha Christie thriller-mystery.</p>
+<p>But then, the rebels we are, we threw everything we learned out the window when we hopped all aboard the Lambda-Chain-Train headed straight to Hell. We started jamming ten statements (read ten responsibilities) onto a single line of code. We started making functions out of lines, and we got right back to where we started, with our functions (read lines) having multiple responsibilities, and what&rsquo;s really going on in there being a more carefully kept secret than the reveal of an Agatha Christie thriller-mystery.</p>
 
-<p>Maybe it&rsquo;s the suspense driving people wild, or maybe it&rsquo;s the spirit of competition to see who can write the next longest line of code. Whatever it is, it&rsquo;s leading to the Fat2.0 revoluation. Because fat isn&rsquo;t how many lines a function is. It&rsquo;s how many statements it is. Just because you snuck six-hundred statements into two lines of code, that doesn&rsquo;t mean you can call it one function, not any less than you could call that tripple-god-object-in-a-single-function a function.</p>
+<p>Maybe it&rsquo;s the suspense driving people wild, or maybe it&rsquo;s the spirit of competition to see who can write the next longest line of code. Whatever it is, it&rsquo;s leading to the Fat2.0 revolution. Because fat isn&rsquo;t how many lines a function is. It&rsquo;s how many statements it is. Just because you snuck six-hundred statements into two lines of code, that doesn&rsquo;t mean you can call it one function, not any less than you could call that triple-god-object-in-a-single-function a function.</p>
 
-<p>So let&rsquo;s stop the revulation right here. Let&rsquo;s stop bringing fat back. We&rsquo;re not Justin Timberlake.</p>
+<p>So let&rsquo;s stop the revolution right here. Let&rsquo;s stop bringing fat back. We&rsquo;re not Justin Timberlake.</p>
 
 <h2><a name="because-duh">Because, Duh</a></h2>
 
@@ -508,7 +645,7 @@
 
 <p>And so begins that teenage phase in programming, and instead of brushing our hair and checking out our jaw-line in the mirror, we&rsquo;re smashing our face on the spacebar and pointing to our Github and yelling, &ldquo;MOM! LOOK HOW PRETTY MY CODE IS!&rdquo;</p>
 
-<p>Some people pick up this habbit after they&rsquo;ve written enough for loops to write a permutation function while driving to work with their feet and explaining to Aunt Becky for the tenth time that, &ldquo;No, Aunt Becky, Chicago is not a continent.&rdquo; This type of Pretty Coder is made. Others are born into Pretty Code, learning it from the start, and these unfortuante souls, to me, correspond to the Toddler&rsquo;s in Tiaras of the programming world.</p>
+<p>Some people pick up this habit after they&rsquo;ve written enough for loops to write a permutation function while driving to work with their feet and explaining to Aunt Becky for the tenth time that, &ldquo;No, Aunt Becky, Chicago is not a continent.&rdquo; This type of Pretty Coder is made. Others are born into Pretty Code, learning it from the start, and these unfortunate souls, to me, correspond to the Toddler&rsquo;s in Tiaras of the programming world.</p>
 
 <p>But whether you were born into Pretty Code, or you picked up moonlight typesetting as a hobby to kill time after how awesome your for-loop skills got, I&rsquo;m here to explain why, objectively, Pretty Code is bullshit. And here&rsquo;s the <strong>TL;DR</strong>:</p>
 
@@ -571,13 +708,13 @@
 
 <p>We can deduce that Pretty Code isn&rsquo;t done to speed up coding, right? Like how are you possibly adding in that whitespace faster than not adding it in? You&rsquo;re not. It&rsquo;s not faster to write code this way.</p>
 
-<p>Your shiny, new i7 isn&rsquo;t looking at its fingernails and saying, &ldquo;You know, I was going to run this dictionary slow, but then I saw how pretty it is, so let me get back to work and start exuctin&#8217; like a G.&rdquo; Right? We know whitespace has no effect on performance.</p>
+<p>Your shiny, new i7 isn&rsquo;t looking at its fingernails and saying, &ldquo;You know, I was going to run this dictionary slow, but then I saw how pretty it is, so let me get back to work and start executin&#8217; like a G.&rdquo; Right? We know whitespace has no effect on performance.</p>
 
 <p>So, the only reason I can see to Pretty Code is because it &ldquo;looks&rdquo; better. The key word here is &ldquo;looks&rdquo;.</p>
 
 <p>&ldquo;Why do I care how code looks,&rdquo; might say the Pretty Code naysayer. And the advocate would say, &ldquo;because you read code more than you write it.&rdquo;</p>
 
-<p>And the Pretty Code advocate is exactly right. And, in being so, completely destorys his case. <strong>We read code more than we write it</strong>. Far more. So it ought to be readable. Who said anything about &ldquo;lookable&rdquo;?</p>
+<p>And the Pretty Code advocate is exactly right. And, in being so, completely destroys his case. <strong>We read code more than we write it</strong>. Far more. So it ought to be readable. Who said anything about &ldquo;lookable&rdquo;?</p>
 
 <p>Have you ever written one line of code:</p>
 
@@ -631,7 +768,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>And you stop for a second to admire how beatiful it is, and then you press <code>i</code> and get to work. But quickly, you&rsquo;re stumpped:</p>
+<p>And you stop for a second to admire how beautiful it is, and then you press <code>i</code> and get to work. But quickly, you&rsquo;re stumped:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -648,7 +785,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>&ldquo;Oh, no!&rdquo; you think, &ldquo;it&rsquo;s so ugly!&rdquo; and after your eyeballs are black and your nose is bluddy and you&rsquo;ve slammed your face on the spacebar a grand total of 18 times, you can go back to saying &ldquo;Mirror, Mirror, on the wall, who has the most whitespace of them all?&rdquo; And you&rsquo;ll know the answer is you, because your code now look like:</p>
+<p>&ldquo;Oh, no!&rdquo; you think, &ldquo;it&rsquo;s so ugly!&rdquo; and after your eyeballs are black and your nose is bloody and you&rsquo;ve slammed your face on the spacebar a grand total of 18 times, you can go back to saying &ldquo;Mirror, Mirror, on the wall, who has the most whitespace of them all?&rdquo; And you&rsquo;ll know the answer is you, because your code now look like:</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -695,7 +832,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Which, A) reading that now makes me want to cry, and B) writing that made me want to punch a baby. I mean, I <strong>literally</strong> have three black eyes and two broken noses and my spacebar key doesn&rsquo;t even work anymore. I had to remap it to &ldquo;CAPS LOCK&rdquo; becuase I already broke all the other ones pretty coding with my face so hard.</p>
+<p>Which, A) reading that now makes me want to cry, and B) writing that made me want to punch a baby. I mean, I <strong>literally</strong> have three black eyes and two broken noses and my spacebar key doesn&rsquo;t even work anymore. I had to remap it to &ldquo;CAPS LOCK&rdquo; because I already broke all the other ones pretty coding with my face so hard.</p>
 
 <p>Anyway, back on topic&hellip; Imagine adding two more links to the <code>links</code> property in the third <code>render</code>:</p>
 
@@ -731,6 +868,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/11/20/javascript-in-wonderland/">JavaScript in Wonderland</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2014/09/16/and-then-there-werent-templates/">And Then There Weren't Templates</a>

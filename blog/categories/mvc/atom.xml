@@ -4,7 +4,7 @@
   <title><![CDATA[Category: mvc | Meditations]]></title>
   <link href="http://cuzzo.github.io/blog/categories/mvc/atom.xml" rel="self"/>
   <link href="http://cuzzo.github.io/"/>
-  <updated>2014-09-24T11:54:02-07:00</updated>
+  <updated>2014-11-20T13:15:00-08:00</updated>
   <id>http://cuzzo.github.io/</id>
   <author>
     <name><![CDATA[Cuzzo]]></name>
@@ -22,7 +22,7 @@
 
 <p>That&rsquo;s templates.</p>
 
-<p>Remember how aweful web development was before templates? And then batManVC swooped in and cleaned up our Spaghetti Gotham codebases. It was awesome. So awesome, in fact, that we never really stopped to think: does this actually make any sense? Because I distinctively remember scratching my chin when I got to the part about templates and saying, &ldquo;is there a silent T in here somewhere?&rdquo; It didn&rsquo;t make sesnse. So you went back to the part about views and all it said was: &ldquo;Weeeeeeeell, it&rsquo;s not <em>really</em> a page, but just think of it as one.&rdquo; Remember how that didn&rsquo;t make sense? The whole V business seemed fishy. It wasn&rsquo;t a page, but it was. Plus it was a template&hellip;. And is it any coincidence that villain and view both start with V? No. But that villainous side of views didn&rsquo;t become obvious until recently.</p>
+<p>Remember how awful web development was before templates? And then batManVC swooped in and cleaned up our Spaghetti Gotham codebases. It was awesome. So awesome, in fact, that we never really stopped to think: does this actually make any sense? Because I distinctively remember scratching my chin when I got to the part about templates and saying, &ldquo;is there a silent T in here somewhere?&rdquo; It didn&rsquo;t make sesnse. So you went back to the part about views and all it said was: &ldquo;Weeeeeeeell, it&rsquo;s not <em>really</em> a page, but just think of it as one.&rdquo; Remember how that didn&rsquo;t make sense? The whole V business seemed fishy. It wasn&rsquo;t a page, but it was. Plus it was a template&hellip;. And is it any coincidence that villain and view both start with V? No. But that villainous side of views didn&rsquo;t become obvious until recently.</p>
 
 <p>And it was just like your shiny, new outfit. It wasn&rsquo;t until years later, when you looked back through your Facebook pictures with fingers crossed, thinking, &ldquo;Please don&rsquo;t have on the technicolored windbreaker, the aviators, and the Loudmouths. Please&hellip;&rdquo; that it hit you: your outfit was stupid. <strong>YOU</strong> were stupid.</p>
 
@@ -38,9 +38,9 @@
 
 <h2>Why Do We Have Templates In the First Place?</h2>
 
-<p>Remember the first time that special someone was coming to the crib? Your room was a wreck. Sweaty gym clothes piled up in the corner, empty Russian Standards littered the floor, and there was pizza sauce all over the ceiling. So what did you do? You threw everything you could into the bathroom, and covered up the ceiling with your favorite poster of Fight Club.</p>
+<p>Remember the first time that special someone was coming to the crib? Your room was a wreck. Sweaty gym clothes piled up in the corner, empty Russian Standards littered the floor, and there was pizza sauce all over the ceiling. So what did you do? You threw everything you could into the bathroom, and plastered your favorite Marilyn Monroe poster over the marinara.</p>
 
-<p>And did that really solve anything? No. When your date showed up, you realized you forgot about the macaroni and cheese by the door, and you&rsquo;d gotten so used to how bad your roommate&rsquo;s ankle braces smelled that you forgot to drop a Fabreeze Bomb. And of course, guess who went straight to the bathroom to tidy up?</p>
+<p>And did that really solve anything? No. When your date showed up, you realized you forgot about the macaroni and cheese by the door, and you&rsquo;d gotten so used to how bad your roommate&rsquo;s ankle braces smelled that you forgot to drop a Fabreze Bomb. And of course, guess who went straight to the bathroom to tidy up?</p>
 
 <p>And this is exactly how templates came to be. Somebody was going through some shitty PHP and said, &ldquo;You know&hellip; what would make this file look a lot better is if I put all this shitty HTML somewhere else.&rdquo;</p>
 
@@ -50,11 +50,11 @@
 
 <h2>So Templates Suck. What&rsquo;s Better?</h2>
 
-<p>The data guys must be the smart guys. Becuase they looked at the model and said, &ldquo;You know&hellip; one letter isn&rsquo;t really adequate here. We need DAOs and DTOs and maybe a DSL just to interact with the storage engines.&rdquo; Most MVCs shipped with an ORM from the get-go.</p>
+<p>The data guys must be the smart guys. Because they looked at the model and said, &ldquo;You know&hellip; one letter isn&rsquo;t really adequate here. We need DAOs and DTOs and maybe a DSL just to interact with the storage engines.&rdquo; Most MVCs shipped with an ORM from the get-go.</p>
 
 <p>And controllers&hellip; any framework that was any framework had a routing framework.</p>
 
-<p>But for views, us front-end guys, we just kept smashing our face on the V key, and hoping that if we split our templates up enough, maybe we wouldn&rsquo;t keep ending up with spaghetti.</p>
+<p>But for views, us front-end guys, we just kept smashing our face on the V key, and hoping that if we split our templates up enough, maybe we&rsquo;d end up with chicken parm.</p>
 
 <p>But that never happened. No matter what ingredients we put into the pot: quinoa, oyster, hummus&hellip; it was always the same. Spaghetti every time. We started off with lots of logic in the templates, we tried out logicless templates (lol). We tried presentation layers. We tried everything&hellip; except getting rid of templates.</p>
 
@@ -125,13 +125,13 @@ var Suggestion = React.createClass({
 });
 </code></pre>
 
-<p>As you can see, before we had our markup separated from our code. But why? Because it looks better? Sure, if you want to keep doing that, fine. But, remember how cool that windbraker was at 17? This type of separation is the same way&hellip; it&rsquo;s separation for the sake of it. The unquestionable thing here is: it&rsquo;s better to think of HTML elements as objects. It&rsquo;s better to think in terms of components than in terms of templates.</p>
+<p>As you can see, before we had our markup separated from our code. But why? Because it looks better? Sure, if you want to keep doing that, fine. But, remember how cool that windbreaker was at 17? This type of separation is the same way&hellip; it&rsquo;s separation for the sake of it. The unquestionable thing here is: it&rsquo;s better to think of HTML elements as objects. It&rsquo;s better to think in terms of components than in terms of templates.</p>
 
 <p>I mean, when&rsquo;s the last time you went through Github and found a template for your webapp? Never.</p>
 
 <p>But with a well-designed component, that&rsquo;s possible.</p>
 
-<p>So why are we still stuck on templates? Why are we covering up pizza on the ceiling with posters of Fight Club? Why don&rsquo;t we actually clean up the mess, think of elements and the events attached to them, and come to the logical conclusion that it&rsquo;s all probably one object that belongs in one file, as one object?</p>
+<p>So why are we still stuck on templates? Why are we covering up pizza on the ceiling with a Some Like It Hot poster? Why don&rsquo;t we actually clean up the mess, think of elements and the events attached to them, and come to the logical conclusion that it&rsquo;s all probably one object that belongs in one file, as one object?</p>
 
 <p>Or are we going to wear our Loudmouths to the grave?</p>
 ]]></content>
@@ -162,7 +162,7 @@ var Suggestion = React.createClass({
 
 <p>First of all, let&rsquo;s just get one thing straight. The very idea of calling Handlebars and Moustache &ldquo;logicless&rdquo; is&hellip; well&hellip; logicless. Retarded even, if you prefer. We&rsquo;ve had logicless templates, long long before Handlebars was a thing. We called those templates HTML. And HTML worked fine, thank you very much. Handlebars, though, is not what the cool kids are calling HTML these days. No, it&rsquo;s a templating library, and it has logic. It has <code>if</code>s and <code>for</code>s and anybody who&rsquo;s anybody these days adds in pluralization helpers, i18n&hellip; The list goes on. But when it comes down to it, in most cases, logicless templates are just a bad, underpowered frameworks.</p>
 
-<p>When I was 16 and Handlebars came onto the scene, I fell for that logicless bullcrap hook, line, and sinker. Naive, 16-year-old me ate that shit up. Separation of concerns? Yes please. That whole promise of having your designers be able to edit your markup without knowing code? That totally worked out. Cause checking in changes and navigating through codebases in general is oh so much easier than understanding trivial <code>if</code> clauses. Cause, you know, non-engineers are completely incompetent. And retard. (Except not really&hellip;)</p>
+<p>When I was 16 and Handlebars came onto the scene, I fell for that logicless bullcrap hook, line, and sinker. Naive, 16-year-old me ate that shit up. Separation of concerns? Yes please. That whole promise of having your designers be able to edit your markup without knowing code? That totally worked out. Cause checking in changes and navigating through codebases in general is oh so much easier than understanding trivial <code>if</code> clauses. Cause, you know, non-engineers are completely incompetent. And retarded. (Except not really&hellip;)</p>
 
 <p>No. Logicless templates don&rsquo;t even make sense. They have all kinds of logic. And you know what else they have all kind of? Broken, empty promises.</p>
 
@@ -170,7 +170,7 @@ var Suggestion = React.createClass({
 
 <p>Plus they fucked up the commit log.</p>
 
-<p>I&rsquo;ve talked to exactly zero people employed with the sole task of marking up HTML and merrily committing this with their magical suprise knowledge of Git&hellip; No, this person is a rumor. That designer that can magically commit changes, navigate the codebase, and knows HTML and CSS and logic&hellip; we have a special title for that type of designer: &ldquo;engineer&rdquo;.</p>
+<p>I&rsquo;ve talked to exactly zero people employed with the sole task of marking up HTML and merrily committing this with their magical surprise knowledge of Git&hellip; No, this person is a rumor. That designer that can magically commit changes, navigate the codebase, and knows HTML and CSS and logic&hellip; we have a special title for that type of designer: &ldquo;engineer&rdquo;.</p>
 
 <p>There&rsquo;s an inherent coupling of semantics (markup) and events (code) in well designed applications. And separating it isn&rsquo;t always necessary, and is sometimes very, very wrong.</p>
 
