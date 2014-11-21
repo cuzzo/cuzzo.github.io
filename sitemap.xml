@@ -3,7 +3,7 @@
   
   
   <url>
-    <loc>http://cuzzo.github.io/blog/2014/11/20/javascript-in-wonderland/</loc>
+    <loc>http://cuzzo.github.io/blog/2014/11/20/js-in-wonderland/</loc>
     <lastmod>2014-11-20T12:35:39-08:00</lastmod>
     <priority>0.8</priority>
   </url>
@@ -35,21 +35,21 @@
   
   <url>
     <loc>http://cuzzo.github.io/</loc>
-    <lastmod>2014-11-20T13:15:00-08:00</lastmod>
+    <lastmod>2014-11-21T10:15:15-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://cuzzo.github.io/blog/archives/</loc>
-    <lastmod>2014-11-20T13:15:00-08:00</lastmod>
+    <lastmod>2014-11-21T10:15:15-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   
   <url>
     <loc>http://cuzzo.github.io/about/</loc>
-    <lastmod>2014-11-20T13:15:00-08:00</lastmod>
+    <lastmod>2014-11-21T10:15:15-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

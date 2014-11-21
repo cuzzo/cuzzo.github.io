@@ -4,7 +4,7 @@
   <title><![CDATA[Meditations]]></title>
   <link href="http://cuzzo.github.io/atom.xml" rel="self"/>
   <link href="http://cuzzo.github.io/"/>
-  <updated>2014-11-20T13:15:00-08:00</updated>
+  <updated>2014-11-21T10:15:15-08:00</updated>
   <id>http://cuzzo.github.io/</id>
   <author>
     <name><![CDATA[Cuzzo]]></name>
@@ -15,17 +15,17 @@
   
   <entry>
     
-    <title type="html"><![CDATA[JavaScript in Wonderland]]></title>
-    <link href="http://cuzzo.github.io/blog/2014/11/20/javascript-in-wonderland/"/>
+    <title type="html"><![CDATA[JS in Wonderland]]></title>
+    <link href="http://cuzzo.github.io/blog/2014/11/20/js-in-wonderland/"/>
     
     <updated>2014-11-20T12:35:39-08:00</updated>
-    <id>http://cuzzo.github.io/blog/2014/11/20/javascript-in-wonderland</id>
+    <id>http://cuzzo.github.io/blog/2014/11/20/js-in-wonderland</id>
     
     <content type="html"><![CDATA[<p>In 1957, General Motors unleashed the greatest invention the world has ever known. Or at least that&rsquo;s what a lot of people thought, until Cadillac Eldorados started plowing over pedestrians and crashing into other cars, highway medians, and large poles en masse. Cadillac&rsquo;s new apparatus sounded too good to be true. It had a James Bond sex appeal. It was all anyone ever wanted from a vehicle since the first man looked to the sky, and saw the birds soaring, and thought: why not me?</p>
 
 <p>Was it the flying car? No. It was better. Way better.</p>
 
-<p>In 1957, Cadillac started building gloveboxes equipped with a minibar. One day later, the population of Detroit halved, and mortuary stocks soared, as everybody who was anybody went out taking shots and the wheel simultaneously, and looking over drunkenly to their friend and saying &ldquo;following that car!&rdquo; and then, inevitably, running over several toddlers and Speed-Racing into a school bus shortly thereafter.</p>
+<p>In 1957, Cadillac started building gloveboxes equipped with a minibar. One day later, the population of Detroit halved, and mortuary stocks soared, as everybody who was anybody went out taking shots and the wheel simultaneously, and looking over drunkenly to their friend and saying &ldquo;follow that car!&rdquo; and then, inevitably, running over several toddlers and Speed-Racing into a school bus shortly thereafter.</p>
 
 <p>Some things that look good, sound good, and even smell good&hellip; some times they&rsquo;re too good to be true. Sometimes they&rsquo;ll send you out of control over a cliff. A glovebox minibar will do this. That little white rabbit did it to Alice. And syntactic sugar will do it to you, and here&rsquo;s why:</p>
 
@@ -51,7 +51,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>I mean, just look at it! It&rsquo;s like Marilyn Monroe and James Dean had a baby. No squigglies. No parenthesis. No semicolons. No nothing. Move over <code>if !</code>ers, unless just stepped in the building. And did you hear about the rockets? The skinny ones? The fat ones? CoffeeScript gets rid of all the wastes. It leaves so much room for activities!</p>
+<p>I mean, just look at it! It&rsquo;s like Marilyn Monroe and James Dean had a baby. No squigglies. No parenthesis. No semicolons. No nothing. Move over <code>if !</code>ers,<code>unless</code> just stepped in the building. And did you hear about the rockets? The skinny ones? The fat ones? CoffeeScript gets rid of all the wastes. It leaves so much room for activities!</p>
 
 <p>But wait a minute&hellip; is sexiness really the metric with which we want to be choosing the next language for our future billion-dollar application? Isn&rsquo;t sexiness a little subjective anyhow? I mean, surely not everyone thinks CoffeeScript is sexy. And Mom&rsquo;s been harping on me for years: &ldquo;It&rsquo;s the personality that counts.&rdquo;</p>
 
@@ -104,7 +104,7 @@
 
 <h2><a name="coffeescript-accomplishes-nothing">CoffeeScript accomplishes nothing</a>.</h2>
 
-<p>The way marketing works is: you find what&rsquo;s different about a product, and regardless of if it&rsquo;s good or not, you sell it. The way developing a good programming language works is: you identify a problem in other languages, like concurrency, and you attempt to address it. Scala does this. Clojure does this. A million new languages do this. It&rsquo;s arguable how good they are at it, but it&rsquo;s pretty objectionable they&rsquo;re designed with that intent.</p>
+<p>The way marketing works is: you find what&rsquo;s different about a product, and regardless of if it&rsquo;s good or not, you sell it. The way developing a good programming language works is: you identify a problem in other languages, like concurrency, and you attempt to address it. Scala does this. Clojure does this. A million new languages do this. It&rsquo;s arguable how good they are at it, but it&rsquo;s pretty objective they&rsquo;re designed with that intent.</p>
 
 <p>But CoffeScript? Okay, it adds inheritance, but ECMA6 does that too&hellip; And isn&rsquo;t composition the kool thing these days anyway? CoffeeScript&rsquo;s only real selling point, if we&rsquo;re being honest, is it&rsquo;s syntax. And, I don&rsquo;t think that&rsquo;s the point you should be using to go all in on CoffeeScript for your next project. I don&rsquo;t think you should follow that rabbit.</p>
 
